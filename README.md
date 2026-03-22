@@ -23,11 +23,9 @@ Hello World! This portfolio is built during summer semester of my first year in 
 
 ## ✨ Future Aspirations
 
-1.  __Implementation of Libraries and Frameworks__
-    - I am fascinated with tailwind and react. These will be used in future updates or other projects
-2.  __Improvement of UIUX__
+1.  __Improvement of UIUX__
     - As this is my first time in front-end development, I am hoping to enhance user experience. Please give me feedbacks for better UIUX or fork the program.
-3.  __Enhancing Github Management__
+2.  __Enhancing Github Management__
     - This is also my first time I use Github. If you can give me suggestions, feel free to contact me.
 
 
