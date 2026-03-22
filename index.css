@@ -1,0 +1,1735 @@
+:root{
+    --itemBackgroundColor: #222222;
+    --mainFontColor: #CCCCCC;
+    --projectWidth: 30%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:black;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: scroll;
+    overflow-x: hidden;
+    position:absolute;
+    width:fit-content;
+    height:400%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+@keyframes fadeAway{
+    to{
+        background-color: white;
+    }
+}
+
+#cheeseCursor{
+    position:absolute;
+    z-index: 10;
+    height:3vw;
+    width:3vw;
+    animation: moveCursor 10s forwards infinite linear;
+    opacity:0;
+    z-index:-10;
+    transition: 0.5s linear;
+}
+
+@keyframes moveCursor{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+body>#detectArea{
+    position:fixed;
+    width:100%;
+    height:10%;
+    z-index:10;
+}
+body>#topBar{
+    position:fixed;
+    display: grid;
+    grid: 100%/ 15% 70% 15%;
+    width:100%;
+    left:0;
+    justify-content: space-between;
+    height:10%;
+    background-color: #222222;
+    z-index:0;
+    align-items: center;
+    z-index:11;
+    font-size: 1.5vw;
+    transition: linear 0.3s;
+}
+
+body>#topBar>#icon{
+    position:relative;
+    width:100%;
+    left:2em;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    grid: 100%/30% 70%;
+
+}
+body>#topBar>#title{
+    display: flex;
+    position:relative;
+    color:white;
+    grid-area: 0 / 1 / span 1 / span 1;
+    font-size:1em;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    width:70%;
+    height:50%;
+}
+body>#topBar>#title>#pageSelectorContainer{
+    position:relative;
+    width:100%;
+    height:100%;
+     display: flex;
+    align-items: center;
+    justify-self: center;
+    align-self:center;
+    justify-content: space-around;
+}
+body>#topBar>#title>#pageSelectorContainer>.button>a{
+        cursor: pointer;
+        transition:linear 0.2s;
+        color:white; 
+        text-decoration: none;
+}
+body>#topBar>#title>#pageSelectorContainer>.button>a:hover{
+    color:cyan;
+}
+body>#topBar>#languageSelector{
+    position:relative;
+    width:100%;
+    height:80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:white;
+    font-size:1vw;
+}
+body>#topBar>#languageSelector>.lang{
+    cursor: pointer;
+}
+body>#topBar>#icon>#text{
+    color:white;
+    position:relative;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height:100%;
+    font-size: .6em;
+    opacity: 0;
+}
+body>#topBar:has(#icon:hover) > #icon>#text{
+    animation: showText 0.3s forwards;
+}
+@keyframes showText{
+    to{
+        opacity: 1;
+    }
+}
+body>#topBar>#icon>#iconImg{
+    position:relative;
+    height:2em;
+    width:2em;
+
+}
+
+
+body>#topBar>#topBarTitle{
+    position:relative;
+    font-size: large;
+    z-index: 100;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:2%;
+}
+
+body>#topBar>#closeApp{
+    position:relative;
+    font-size: large;
+    z-index: 100;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:2%;
+    cursor: pointer;
+}
+
+@keyframes scrollDown{
+    to{
+        top:0;
+    }
+}
+@keyframes scrollUp{
+    to{
+        top:-20%;
+    }
+}
+
+#body>#intro{
+    
+    position:relative;
+    width:100%;
+    height:100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    padding-top:3%;
+}
+
+#body>#intro>#introContainer{
+    position:relative;
+    text-align: center;
+    
+    width:100%;
+    height:80%;
+    display: grid;
+    grid: auto auto auto / auto auto auto;
+    color:white;
+    
+
+}
+
+#body>#intro>#introContainer>.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: bold;
+}
+#body>#intro>#introContainer>.textTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2.5vw;
+    font-weight: bold;
+}
+
+    #body>#intro>#introContainer>.text{
+        font-size:2vw;
+    }
+   #body>#intro>#introContainer>#text1{
+        display: flex;
+        flex-direction: column;
+        transform: rotateZ(90deg);
+        align-items:baseline;
+        justify-self: right;
+    }
+    #body>#intro>#introContainer>#text1>#text1-1{
+        margin-bottom:10%;
+        position:relative;
+        width:100%;
+        display: flex;
+        justify-content: right;
+        color: red;
+        opacity: 0;
+        left:10%;
+        top:0;
+        animation:moveHorizontally 0.1s linear forwards;
+    }
+    #body>#intro>#introContainer>#text1>#text1-2{
+        margin-bottom:10%;
+        position:relative;
+        width:100%;
+        display: flex;
+        justify-content: right;
+        color: orange;
+         opacity: 0;
+        left:-10%;
+        animation:moveHorizontally 0.1s 0.1s linear forwards;
+    }
+    #body>#intro>#introContainer>#text3{
+        grid-area: 1 / 2 / span 1 / span 2;
+        display: flex;
+        color:yellow;
+        position: relative;
+        justify-self: left;
+        left:-10%;
+        opacity: 0;
+        left:-10%;
+        animation:moveHorizontally 0.1s 0.2s linear forwards;
+    }
+    #body>#intro>#introContainer>#text4{
+        color:lightgreen;
+        position:relative;
+        justify-content: right;
+        top:50%;
+         opacity: 0;
+        left:10%;
+        animation:moveHorizontally 0.1s 0.2s linear forwards;
+    }
+    #body>#intro>#introContainer>#text5{
+
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+    #body>#intro>#introContainer>#text6{
+        transform: rotateZ(270deg);
+        display: flex;
+        position: relative;
+        left:-50%;
+        top:50%;
+        align-items: last baseline;
+        grid-area: 2 / 3 / span 1 / span 1;
+        color:lightblue;
+        opacity: 0;
+        animation:moveVertically 0.1s 0.3s linear forwards;
+    }
+    #body>#intro>#introContainer>#text7{
+        grid-area: 3 / 1 / span 1 / span 1;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        color: aliceblue;
+        position:relative;
+        left:-10%;
+        opacity: 0;
+        animation:moveHorizontally 0.1s 0.4s linear forwards;
+    }
+    #body>#intro>#introContainer>#text9{
+        grid-area: 3 / 2 / span 1 / span 2;
+        display: flex;
+        flex-direction: column;
+    }
+     #body>#intro>#introContainer>#text9>#text9-1{
+        position:relative;
+        right:0%;
+        color: pink;
+        opacity: 0;
+        animation: moveHorizontally3 0.1s 0.5s linear forwards;
+     }
+    #body>#intro>#introContainer>#text9>#text9-2{
+        position:relative;
+        left:0%;
+        color:aqua;
+        opacity: 0;
+        animation: moveHorizontally2 0.1s 0.5s linear forwards;
+     }
+         @keyframes moveVertically{
+        to{
+             opacity: 1;
+            top:-10%;;
+        }
+    }
+    @keyframes moveHorizontally{
+        to{
+             opacity: 1;
+            left:0;
+        }
+    }
+    @keyframes moveHorizontally2{
+        to{
+            opacity: 1;
+            left:10%;
+        }
+    }
+    @keyframes moveHorizontally3{
+        to{
+            opacity: 1;
+            right:10%;
+        }
+    }
+    #body #intro #bottomText{
+        color:white;
+        font-size:1.5vw;
+
+    }
+    #body>#intro>#movingCursor1{
+        position:absolute;
+        width:2vw;
+        height:2vw;
+        background-image: url("image/pointer.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left:100vw;
+        z-index:1;
+    }
+
+    #body>#intro>#movingCursor1:after{
+        content: "dev";
+        position: relative;
+        top:100%;
+        left:100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding:30%;
+        border-radius: 20%;
+        color:white;
+        background-color: aqua;    
+    }
+
+    #body>#intro>#movingCursor2{
+        position:absolute;
+        width:2vw;
+        height:2vw;
+        background-image: url("image/pointer2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index:-110;
+    }
+
+    #body>#intro>#movingCursor2:after{
+        content: "Cheese";
+        position: relative;
+        top:100%;
+        left:100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding:30%;
+        border-radius: 10%;
+        color:white;
+        background-color: orange;  
+    }
+
+
+    #myProject{
+        position:relative;
+        height:100%;
+        width:100%;
+        display:inline-grid;
+        grid: 17% 65% 18%/ 30% 30% 30%;
+        align-items: center;
+        justify-content: center;
+    }
+    #myProject>#title{
+        grid-area:1 / 1 / span 1 / span 3;
+        height:100%;
+        color:white;
+        font-size: 3vw;
+        font-weight:bold;
+        display: flex;
+        align-items:last baseline;
+        position:relative;
+        bottom:20%;
+    }
+
+    #myProject>.projectsMain{
+        position:relative;
+        padding:2%;
+        border-radius: 10px;
+        display: grid;
+        width:90%;
+        height:100%;
+        grid: 60% 10% 20% 10%/ 100%;
+        top:100%;
+        
+        opacity: 0%;
+         cursor: pointer;
+        transition: ease-in-out 0.2s;
+    }
+    
+    #myProject>.projectsMain>.PicContainer{
+        position:relative;
+        width:80%;
+        left:10%;
+        height:100%;
+    }
+     #myProject>.projectsMain>.PicContainer>.projectPic{
+        position:relative;
+        width:70%;
+        height:100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 3%;
+        top:3%;
+        left:15%;
+        background-color: #777777;
+        background-blend-mode:overlay;
+     }
+     #myProject>.projectsMain>#project1PicContainer>#project1Pic{
+        background-image: url("image/project6.jpeg");
+     }
+     #myProject>.projectsMain>#project2PicContainer>#project2Pic{
+        background-image: url("image/project1.jpeg");
+     }
+      #myProject>.projectsMain>#project3PicContainer>#project3Pic{
+        background-image: url("image/project3.jpeg");
+     }
+    body>#myProject>.projectsMain>.mainTextContainer>.textContainer{
+        color: white;
+        display: flex;
+        justify-self: center;
+        font-weight: bold;
+        z-index:10;
+        margin-top:10%;
+        font-size: 1.5vw;
+    }
+    body>#myProject>.projectsMain>.mainTextContainer>.subTextContainer{
+        color:#AAAAAA;
+        font-size:0.8vw;
+        z-index:10;
+    }
+
+    @keyframes showProjects{
+        to{
+            top:0;
+            opacity: 1;
+        }
+    }
+
+
+
+    body>#myProject>.projectsMain>.techContainer{
+        grid-area: 4 / 1 /span 1 / span 1;
+        position: relative;
+        width:100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color:var(--mainFontColor);
+
+     }
+     body>#myProject>.projectsMain>.techContainer>.programmingLang{
+        position: relative;
+        width:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+    body>#myProject>.projectsMain>.techContainer>#C>#CPic{
+        background-image: url("image/C.png");
+
+        position:relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:3vw;
+        height:3vw;
+
+     }
+    body>#myProject>.projectsMain>.techContainer>#HTML>#HTMLPic{
+        background-image: url("image/html.png");
+        position:relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:3vw;
+        height:3vw;
+     }
+      body>#myProject>.projectsMain>.techContainer>#CSS>#CSSPic{
+        background-image: url("image/CSS.png");
+        position:relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:3vw;
+        height:3vw;
+     }
+      body>#myProject>.projectsMain>.techContainer>#JS>#JSPic{
+        background-image: url("image/javascript.png");
+        position:relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:3vw;
+        height:3vw;
+     }
+     body>#myProject>.projectsMain>.techContainer>#python>#pythonPic{
+        background-image: url("image/python.png");
+        position:relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:3vw;
+        height:3vw;
+     }
+    body>#myProject>#loadMoreContainer{
+        position:relative;
+        grid-area: 3 / 1 / span 1 / span 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:100%;
+        width:100%;
+        z-index: 1;
+     }
+     body>#myProject>#loadMoreContainer>#loadMore{
+        position: relative;
+        height:50%;
+        background-color: black;
+        border:white solid 2px;
+        border-radius: 20px;
+        width:15%;
+        font-weight: bold;
+        font-size: 1.5vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        z-index:1000;
+        color:white;
+        overflow: hidden;
+        cursor: pointer;
+     }
+    body>#myProject>#loadMoreContainer>#loadMore:after{
+        content:"";
+        position:absolute;
+        z-index:-100;
+        top:100%;
+        height:2vw;
+        width:2vw;
+        background-color: skyblue;
+        transition: ease-in-out 0.2s;
+        border-radius: 30%;
+
+    }
+    body>#myProject>#loadMoreContainer>#loadMore:hover:after{
+        transform: scaleX(1000%) scaleY(1000%);
+        top:0%;
+    }
+
+    body>#footer{
+        position:relative;
+        width:100%;
+        height:60%;
+        display: grid;
+        grid: 90% 10%/100%;
+
+    }
+    body>#footer>#info>.buttonFooter{
+        position: relative;
+        left:-30%;
+        opacity: 0;
+    }
+    body>#footer>#info{
+        position:relative;
+        width:98%;
+        height:98%;
+        left:1%;
+        left:1%;
+        border: 3px #666666 solid;
+        border-radius: 1%;
+        color:white;
+        display: grid;
+        grid:  50% 50% / 40% 15% 20% 25%;
+        overflow:hidden;
+
+
+    }
+    body>#footer>#info>#hello{
+        grid-area: 1 / 1 / span 1 / span 1;
+        position:relative;
+        height:100%;
+        width:100%;
+        padding-top:5%;
+        padding-left:5%;
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
+    body>#footer>#info>#exploreContainer{
+        grid-area: 1 / 2 / span 1 / span 1;
+        position:relative;
+        height:100%;
+        width:100%;
+        display: grid;
+        font-size: 1vw;
+        grid: 30% 17% 17% 17% / auto;
+        top:10%
+
+    }
+    body>#footer>#info>#exploreContainer>.exploreButton{
+        cursor: pointer;
+        width:fit-content;
+        overflow: hidden;
+        transition:  0.1s ease-out;
+    }
+    body>#footer>#info>#exploreContainer>.exploreButton:after{
+        content:"";
+        display: flex;
+        position:relative;
+        background-color: lightblue;
+        height:3%;
+        width: 100%;
+        left:-100%;
+        transition: 0.1s ease-out;
+
+
+    }
+    body>#footer>#info>#exploreContainer>.exploreButton:hover:after{
+        left:0;
+    }
+    body>#footer>#info>#exploreContainer>.exploreButton:hover{
+        color: lightblue;
+    }
+    body>#footer>#info>#socialContainer{
+        grid-area: 1 / 3 / span 1 / span 1;
+        position:relative;
+        height:100%;
+        width:100%;
+        display:grid;
+        top:10%;
+        grid: 30% 20% 20% / auto auto;
+        
+    }
+    body>#footer>#info>#socialContainer>#socialTitle{
+        grid-area: 1/ 1 / span 1 / span 2;
+    }
+    body>#footer>#info>#socialContainer>.socialButton{
+        font-size:1vw;
+        cursor:pointer;
+        position:relative;
+        width:fit-content;
+        overflow:hidden;
+        transition: 0.1s ease-out;
+    }
+    body>#footer>#info>#socialContainer>.socialButton:after{
+        content: "";
+        display: flex;
+        position:relative;
+        width:100%;
+        height:3%;
+        background-color: lightblue;
+        left:-100%;
+        transition: 0.1s ease-out;
+    }
+    body>#footer>#info>#socialContainer>.socialButton:hover:after{
+        left:0%;
+    }
+    body>#footer>#info>#socialContainer>.socialButton:hover{
+        color:lightblue;
+    }
+    body>#footer>#info>#otherPagesContainer{
+        grid-area: 1 / 4 / span 1 / span 1;
+        position:relative;
+        height:80%;
+        top:10%;
+        width:80%;
+        display: grid;
+        grid: 50% 50% / 100%;
+    }
+    body>#footer>#info>#otherPagesContainer>.container{
+        display: grid;
+        cursor: pointer;;
+        grid:50% 50% / 50% 50%;
+    }
+    body>#footer>#info>#otherPagesContainer>.container>.title{
+        grid-area: 1 / 1 / span 1 / span 1;
+        font-weight:bold;
+        font-size:1.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:linear 0.1s;
+    }
+    body>#footer>#info>#otherPagesContainer>.container>.subtitle{
+        grid-area: 2 / 1 / span 1 / span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:1vw;
+        color:var(--mainFontColor);
+        transition:linear 0.1s;
+    }
+    body>#footer>#info>#otherPagesContainer>.container>#arrowImgContainer{
+        grid-area: 1 / 2 / span 2 / span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+       
+        width:80%;
+        height:80%;
+    }
+    body>#footer>#info>#otherPagesContainer>.container>#arrowImgContainer>.arrow{
+        background-image : url("image/arrow.png");
+         background-repeat: no-repeat;
+        background-size: contain;
+        position:relative;
+        width:3vw;
+        height:3vw;
+        transition:ease-out 0.1s;
+    }
+    body>#footer>#info>#otherPagesContainer>.container:hover > .title{
+        color:cornflowerblue
+    }
+    body>#footer>#info>#otherPagesContainer>.container:hover > #arrowImgContainer>.arrow{
+        transform: rotateZ(-45deg);
+    }
+    body>#footer>#info>#name{
+        grid-area: 2 / 1 / span 1 / span 4;
+        position:relative;
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        font-size:15vw;
+        bottom:-50%;
+
+    }
+    body>#footer>#copyrightContainer{
+        display: flex;
+        color:white;
+        align-items: center;
+        justify-content: space-between;
+        padding-left:2%;
+        padding-right: 2%;
+    }
+
+#enhanceMyFace{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    z-index: -10000;
+    display: grid;
+    grid: 100% / 50% 50%;
+    opacity: 0;
+}
+
+#enhanceMyFace>.faceBackdrops{
+    transition: 0.5s ease-in-out;
+    position:relative;
+    width:100%;
+    height:100%;
+    opacity:0.5;
+    background-color: #222222;
+}
+
+#enhanceMyFace > #leftBackdrop{
+    left:-100vw;
+}
+
+#enhanceMyFace > #rightBackdrop{
+    right:-100vw;
+}
+#enhanceMyFace > #faceContent{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid: 10% 70% 20% /100%;
+}
+
+#enhanceMyFace > #faceContent > #faceLeaveContainer{
+    position:relative;
+    width:100%;
+    height:100%;
+    font-size:min(5vw,5vh);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items:last baseline;
+    justify-content: center;
+}
+
+#enhanceMyFace > #faceContent > #faceEnhanced{
+    position: relative;
+    width:min(60vw,60vh);
+    height:min(60vw,60vh);
+    background-color: red;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    background-image: url("image/myFace.jpg");
+    border-radius: 100px;
+    background-size: contain;
+    background-position:center;
+    border: yellow solid 3px;
+}
+
+#enhanceMyFace > #faceContent > #faceCaption{
+    position: relative;
+    color:#dddddd;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: min(3vw,3vh);
+}
+
+#enhanceMyFace > #faceContent > #faceLeaveContainer > #faceLeave{
+    display: flex;
+    position:relative;
+    width:2em;
+    height:2em;
+    align-items: center;
+    justify-content: center;
+    right:2em;
+    cursor:pointer;
+}
+
+#main{
+   position:relative;
+    display: grid;
+    grid: 20% 10% 40% 10% 10% 10% / 20% 55% 25%;
+    width:95%;
+    height:100%;
+    align-items: center;
+    z-index:9;
+    grid-gap:1%;
+    align-self: center;
+    
+}
+
+
+
+#main>.item{
+    position:relative;
+    display:flex;
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    background-color: var(--itemBackgroundColor);
+    border-style:solid;
+    transition:ease-in 0.3s;
+    border-radius: 20px;
+}
+
+
+#main>#mainIcon{
+    grid-area: 1/1/span 3/span 1;
+    display: grid;
+    grid: 30% 40% 10% 20%/ auto;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    left:20%;
+    opacity: 0;
+
+    
+}
+#main>#mainIcon>#myFaceContainer{
+    position:relative;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main>#mainIcon>#myFaceContainer>#cheesePic{
+    position:relative;
+    display: flex;
+    width:10vw;
+    height:10vw;
+    padding:2%;
+    border-style:solid;
+    border-color: yellow;
+    border-width: 3px;
+    border-radius:99px;
+    margin-top:10%;
+    z-index: 100;
+    cursor: pointer;
+    
+}
+
+
+#main>#mainIcon>#info{
+    margin-top: 15%;
+    position:relative;
+    color:var(--mainFontColor);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    border-top:#777777;
+    border-bottom: #777777;
+    border-left: var(--itemBackgroundColor);
+    border-right: var(--itemBackgroundColor);
+    border-style:solid;
+    border-width:5px;
+    padding-top:3%;
+    padding-bottom:3%;
+}
+#main>#mainIcon>#social{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position:relative;
+    width:100%;
+    height:30%;
+
+}
+#main>#mainIcon>#socialTitle{
+    color:#CCCCCC;
+    position:relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    top:30%;
+    font-size:1.5vw;
+}
+#main>#mainIcon>#social>.icon{
+    position:relative;
+    width:2.5vw;
+    height:2.5vw;
+    background-color: #444444;
+    padding:2%;
+    cursor:pointer;
+    border-radius: 2000px;
+    left:0;
+    
+    transition: ease-in-out 0.2s ;
+}
+
+#main>#languageProf{
+    grid-area: 4/1/span 3/span 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    opacity: 0;
+
+}
+
+#main>#languageProf>#languageProfTitle{
+    color:white;
+    font-weight: bold;
+    font-size:1.5vw;
+    margin:2%;
+}
+#main>#languageProf>.language{
+    color:var(--mainFontColor);
+    font-size: 1vw;
+    display: grid;
+    grid: 60% 40%/30% 70%;
+    position:relative;
+    height:27%;
+    width:100%;
+
+}
+#main>#languageProf>.language>.progress{
+    position:relative;
+    grid-area: 2 / 2 / span 1 / span 2;
+    width:80%;
+    height:100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#main>#languageProf>.language>.progress>.bar{
+    position:relative;
+    height:100%;
+    width:0;
+    
+}
+#main>#languageProf>.language>.progress>#bar2{
+    background-color: green;
+   animation: progress1 1.5s forwards;
+}
+#main>#languageProf>.language>.progress>#bar3{
+    background-color: blue;
+   animation: progress1 1.5s forwards;
+}
+#main>#languageProf>.language>.progress>#bar1{
+    position:relative;
+    background-color: red;
+}
+
+#main>#languageProf>.language>.progressName{
+    grid-area: 1 / 2 / span 1 / span 2;
+    width:80%;
+    height:100%;
+    position:relative;
+    left:0%;
+    top:30%;
+    width:30%;
+    text-align: center;;
+    color:white;
+    height:60%;
+    border-radius: 10px;
+    
+}
+#main>#languageProf>.language>#progressName1{
+    background-color: red;
+}
+#main>#languageProf>.language>#progressName2{
+    background-color:   green;
+}
+#main>#languageProf>.language>#progressName3{
+    background-color: blue;
+}
+#main>#languageProf>.language>.name{
+    grid-area: 1 / 1 / span 2 / span 1;
+    display: flex;
+    align-items:last baseline;
+    margin-left:3px;
+    margin-bottom: 12%;
+}
+
+#main>#aboutMe{
+    grid-area: 1/2/span 2/span 1;
+    display:inline-flex;
+    flex-direction: column;
+    font-size: 1vw;
+    position: relative;
+    top:10%;
+    opacity: 0;
+}
+#main>#aboutMe>#aboutMeTitle{
+    color:white;
+    font-size:2vw;
+    margin:2%;
+    font-weight: bold;
+}
+#main>#aboutMe>#aboutMeContent{
+    color:var(--mainFontColor);
+    margin:2%;
+    font-size:1vw;
+}
+#main>#projects{
+    grid-area: 3/2/span 2/span 1;
+    display:flex;
+    display: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 1vw;
+}
+#main>#projects>#projectTitle{
+    margin:2%;
+    color:white;
+    font-size:2.5vw;
+    position:relative;
+    font-weight: bold;
+    overflow: hidden;
+}
+#main>#projects>#scroll{
+    position: absolute;
+    bottom:10%;
+    height:60%;
+    width:calc(var(--projectWidth)*12);
+    left:0;
+    gap: 1%;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: moveRight 30s infinite forwards linear;
+}
+
+#main>#projects>#scroll:hover{
+    animation-play-state: paused;
+}
+
+@keyframes moveRight{
+    to{
+        left:calc(var(--projectWidth)*-8);
+    }
+}
+
+#main>#projects>#scroll>.project{
+    position:relative;
+    height:100%;
+    width:50%;
+    background-color: #444444;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--mainFontColor);
+}
+
+#main>#projects>#scroll>.project>.projectImg{
+    position:relative;
+    height:100%;
+    width:100%;
+   
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    align-items: last baseline;
+}
+#main>#projects>#scroll>.project>#projectImg1{
+    background-image: url("image/project1.jpeg");
+}
+#main>#projects>#scroll>.project>#projectImg2{
+    background-image: url("image/project2.jpg");
+}
+#main>#projects>#scroll>.project>#projectImg3{
+    background-image: url("image/project3.jpeg");
+}
+#main>#projects>#scroll>.project>#projectImg4{
+    background-image: url("image/project4.jpg");
+}
+#main>#projects>#scroll>.project>#projectImg5{
+    background-image: url("image/project5.jpg");
+}
+#main>#projects>#scroll>.project>#projectImg6{
+    background-image: url("image/project6.jpeg");
+}
+#main>#projects>#scroll>.project>#projectImg7{
+    background-image: url("image/project7.jpeg");
+}
+#main>#projects>#scroll>.project>.projectImg:hover > .projectItem{
+    animation: showProj 0.3s forwards;
+}
+
+@keyframes showProj{
+    to{
+        opacity: 1;
+    }
+}
+
+#main>#projects>#scroll>.project>.projectImg>.projectItem{
+    position:relative;
+    display: grid;
+    grid: 50% 50% / 100%;
+    flex-direction: column;
+    height:40%;
+    width:100%;
+    border-radius: 10px;
+    color:white;
+    font-weight: bold;
+    top:20%;
+    background-color: #444444;
+    text-align: center;
+    font-size: 1vw;
+    border-radius: 10px;
+    opacity:0.7;
+    transition: 0.2s ease-in-out;
+
+}
+
+#main>#projects>#scroll>.project>.projectImg:hover>.projectItem{
+    opacity: 1;
+    top:0%;
+}
+
+#main>#projects>#scroll>.project>.projectImg>.projectItem>.projectDescp{
+    font-size: 0.8vw;
+    font-weight: normal;
+    background-color: #222222;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+}
+#main>#programmingLangProf{
+    grid-area: 5 / 2/span 2/span 1;
+    display: flex;
+    flex-direction: column;
+    bottom:10%;
+    opacity: 0;
+}
+#main>#programmingLangProf>#programmingLangProfTitle{
+    color:white;
+    margin:2%;
+    font-weight: bold;
+    font-size:2vw;
+}
+#main>#programmingLangProf>#techContainer{
+    position:relative;
+    width:100%;
+    height:50%;
+    display: grid;
+    grid: auto auto /auto auto auto auto auto auto;
+}
+#main>#programmingLangProf>#techContainer>div{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--mainFontColor);
+    font-size:1vw;
+}
+#main>#programmingLangProf>#techContainer>div>.techImg{
+    position:relative;
+    width:2vw;
+    height:2vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#main>#programmingLangProf>#techContainer>#tech1{
+    grid-area: 1/1/span 1/span 2;
+}
+#main>#programmingLangProf>#techContainer>#tech1>#techImg1{
+    background-image:url("image/python.png");
+}
+#main>#programmingLangProf>#techContainer>#tech2{
+    grid-area: 1/3/span 1/span 2;
+}
+#main>#programmingLangProf>#techContainer>#tech2>#techImg2{
+    background-image:url("image/C.png");
+}
+#main>#programmingLangProf>#techContainer>#tech3{
+    grid-area: 1/5/span 1/span 2;
+}
+#main>#programmingLangProf>#techContainer>#tech3>#techImg3{
+     background-image:url("image/html.png");
+}
+#main>#programmingLangProf>#techContainer>#tech4{
+    grid-area: 2/1/span 1/span 2;
+}
+#main>#programmingLangProf>#techContainer>#tech4>#techImg4{
+ background-image:url("image/css.png");
+}
+#main>#programmingLangProf>#techContainer>#tech5{
+    grid-area: 2/3/span 1/span 2;
+}
+#main>#programmingLangProf>#techContainer>#tech5>#techImg5{
+ background-image:url("image/javascript.png");
+}
+#main>#programmingLangProf>#techContainer>#tech6{
+    grid-area: 2/5/span 1/span 2;
+}
+#main>#programmingLangProf>#techContainer>#tech6>#techImg6{
+ background-image:url("image/java.png");
+}
+
+#main>#certification{
+    grid-area: 1/3/ span 2/ span 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right:10%;
+    opacity: 0;
+}
+#main>#certification>#certificationTitle{
+    color:white;
+    margin:2%;
+    font-weight: bold;
+    font-size:2vw;
+}
+#main>#certification>#certContainer{
+    position:relative;
+    height:80%;
+    width:90%;
+    margin-left:5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+#main>#certification>#certContainer>.cert{
+    position:relative;
+    display: flex;
+    align-items: center;
+    font-size:1vw;
+}
+#main>#certification>#certContainer>.cert>.bulletPoint{
+    position:relative;
+    width:1vw;
+    height:1vw;
+}
+#main>#certification>#certContainer>.cert>.certName{
+    color:var(--mainFontColor);
+    margin-left: 1vw;
+}
+
+
+#main>#experience{
+    grid-area: 3/3/ span 1/ span 1;
+    display: flex;
+    flex-direction: column;
+    font-size:2vw;
+    position:relative;
+    right:10%;
+    opacity: 0;
+}
+#main>#experience>#experienceTitle{
+    color:white;
+    margin:3%;
+    font-weight:bold;
+}
+#main>#experience>#experienceContainer{
+    position:relative;
+    height:80%;
+    width:90%;
+    margin-left:5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#main>#experience>#experienceContainer>.exp{
+    display: flex;
+    align-items: center;
+}
+#main>#experience>#experienceContainer>.exp>.bulletPoint2{
+    position:relative;
+    height:1vw;
+    width:1vw;
+}
+#main>#experience>#experienceContainer>.exp>.expYear{
+    position:relative;
+    display: flex;
+    text-align: center;
+    width:30%;
+    margin-left: 4%;
+    color:var(--mainFontColor);
+    font-size:1vw;
+}
+
+#main>#experience>#experienceContainer>.exp>.expTitle{
+    color:var(--mainFontColor);
+    font-size:1vw;
+    margin-left: 4%;
+}
+
+
+
+
+#main>#education{
+    grid-area: 4/3/ span 3/ span 1;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    right:10%;
+    opacity: 0;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#main>#education>#eduTitle{
+    font-weight: bold;
+    color:white;
+    margin-left:2%;
+    font-size:2vw;
+}
+#main>#education>.educationTabs{
+    position:relative;
+    display: grid;
+    grid-gap:10px;
+    grid: 40% 33.33% 26.67%/ 5% 10% 80%;
+    margin-left:1%;
+    margin-right:1%;
+}
+#main>#education>.educationTabs>.buttonContainer{
+    grid-area:1 / 1/span 3/span 1;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#main>#education>.educationTabs>.buttonContainer>.buttons{
+    position:relative;
+    display: flex;
+    width:1vw;
+    height:1vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main>#education>.educationTabs>.years{
+    grid-area: 1 / 2 / span 3 / span 1;
+    display: flex;
+    align-items: center;
+    color:var(--mainFontColor);
+    font-size: 0.5vw;
+    justify-content: left;
+    overflow:hidden;
+}
+#main>#education>.educationTabs>.institution{
+    grid-area: 1 / 3 / span 1 / span 1;
+    position: relative;
+    display: flex;
+    align-items: right;
+    justify-content: left;
+    color:var(--mainFontColor);
+    font-size:1vw;
+    font-weight: bold;
+}
+#main>#education>.educationTabs>.courses{
+    grid-area: 2 / 3 / span 1 / span 1;
+    position: relative;
+    display: flex;
+    align-items: left;
+    color:var(--mainFontColor);
+    justify-content: left;
+    font-size:0.75vw;
+}
+
+ #body #footer #info div #exploreTitle{
+        font-size:2.5vw;
+    }
+#body #footer #info div #socialTitle{
+    font-size: 2.5vw;
+}
+
+@media (max-width:450px){
+    #body{
+        position:absolute;
+        overflow-x: hidden;
+        height:800vh;   
+    }
+    #body>#intro{
+    align-self: center;
+    justify-self: center;
+    position:relative;
+    width:100%;
+    height:12%;
+    font-size:1.5vw;
+}
+body>#topBar>#title{
+   font-size:4vw;
+}
+body>#topBar>#languageSelector{
+    width:15%;
+}
+body>#topBar>#languageSelector>.lang{
+    font-size: 3vw;
+}
+#body>#intro>#introContainer>.textTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:3.5vw;
+    font-weight: bold;
+}
+
+    #body>#intro>#introContainer>.text{
+        font-size:3vw;
+    }
+    #body #intro #bottomText{
+        color:white;
+        font-size:2vw;
+
+    }
+
+    #body #main{
+        position:relative;
+        height:30%;
+        width:100%;
+        grid: 25% 15% 10% 15% 7% 7% 10% 10%/ 100%;
+    }
+    #body #main #mainIcon{
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+    #body #main #mainIcon #myFaceContainer #cheesePic{
+        height:20vw;
+        width:20vw;
+    }
+    #body #main #mainIcon #info{
+        font-size: 2.5vw;
+    }
+    #body #main #mainIcon #socialTitle{
+        font-size:3vw;
+        position:relative;
+        left:2vw;
+    }
+
+    #body #main #mainIcon #social .icon{
+        position:relative;
+        width:5vw;
+        height:5vw;
+    }
+
+
+    #body #main #languageProf{
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    #body #main #languageProfTitle{
+        font-size:4vw;
+    }
+    #body #main .language{
+        font-size:2.5vw;
+    }
+    #body #main .language .progressName{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #body #main #aboutMe{
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    #body #main #aboutMe #aboutMeTitle{
+        font-size: 4vw;
+    }
+    #body #main #aboutMe #aboutMeContent{
+        font-size:2.5vw;
+    }
+    #body #main #projects{
+        position: relative;
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+    #body #main #projects #scroll .project{
+        border-radius: 10px;
+    }
+    #body #main #projects #scroll .project{
+        position:relative;
+        width:300px;
+        overflow:hidden;
+    }
+    #body #main #projects #scroll .project .projectImg .projectItem{
+        font-size: 0.45rem;
+        position: relative;
+    }
+     #body #main #projects #scroll .project .projectImg .projectDescp{
+        font-size: 0.4rem;
+        position: relative;
+    }
+    #body #main #projects #projectTitle{
+        font-size: 4vw;
+    }
+    #body #main #programmingLangProf{
+        grid-area: 5 / 1 / span 1 / span 1;
+        display:grid;
+        grid: 30% 70%/ 100%;
+        grid-gap: 10%;
+    }
+    #body #main #programmingLangProf #programmingLangProfTitle{
+        font-size: 4vw;
+    }
+    #body #main #programmingLangProf  div{
+        font-size: 3vw;
+    }
+    #body #main #programmingLangProf #techContainer{
+        position:relative;
+    }
+    #body #main #certification{
+        grid-area: 6 / 1 / span 1 / span 1;
+    }
+    #body #main #certification #certificationTitle{
+        font-size: 4vw;
+    }
+    #body #main #certification #certContainer div{
+        font-size: 2.5vw;
+    }
+    #body #main #experience{
+        grid-area:7 / 1 / span 1 / span 1;
+    }
+    #body #main #experience #experienceTitle{
+        font-size:4vw;
+    }
+    #body #main #experience #experienceContainer div{
+        font-size:2.5vw;
+    }
+    #body #main #education{
+        grid-area:8 / 1 / span 1 / span 1;
+    }
+    #body #main #education #eduTitle{
+        font-size:4vw;
+    }
+    #body #main #education div{
+        font-size:2.5vw;
+    }
+    #body #myProject{
+        position:relative;
+        height:30%;
+        width:100%;
+        top:15vh;
+        display: grid;
+        grid: 4% 27% 27% 27% 9% / 100%;
+        grid-gap: 2%;
+    }
+    #body #myProject #title{
+        font-size: 4vw;
+        position: relative;
+        display: flex;
+        width:100%;
+        align-self: last baseline;
+    }
+    #body #myProject .projectsMain .PicContainer .projectPic{
+        background-position: center;
+    }
+    #body #myProject #project1{
+        grid-area: 2 / 1/ span 1 / span 1;
+        position:relative;
+        width:100%;
+    }
+    #body #myProject #project2{
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+    #body #myProject #project3{
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+    #body #myProject .projectsMain .PicContainer{
+        position:relative;
+        width:60%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+    #body #myProject .projectsMain .textContainer{
+        font-size: 4vw;
+    }
+    #body #myProject .projectsMain .subTextContainer{
+        font-size: 2.5vw;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
+    #body #myProject #loadMoreContainer{
+        grid-area: 5 / 1 / span 1 / span 1;
+        position:relative;
+        width:100%;
+    }
+    #body #myProject #loadMoreContainer #loadMore{
+        width:30%;
+        height:30%;
+        font-size:3vw;
+    }
+    
+    #body #footer{
+        position:relative;
+        height:5%;
+        top:2%;
+       
+    }
+    body>#footer>#info{
+        position:relative;
+        width:98%;
+        height:98%;
+        left:1%;
+        left:1%;
+        border: 3px #666666 solid;
+        border-radius: 1%;
+        color:white;
+        display: grid;
+        grid:  40% 40% 10%/ 40% 30% 30%;
+        overflow:hidden;
+        grid-gap: 5%;
+
+
+    }
+     #body #footer #info #hello{
+        font-size:2.5vw;
+        grid-area: 1/ 1/ span 2 / span 1;
+    }
+     
+   #body #footer #info div{
+    display: flex;
+    height:100%;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+   }
+    #body #footer #info div #exploreTitle{
+        font-size:3vw;
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    #body #footer #info #exploreContainer .exploreButton{
+        font-size:1.5vh;
+    }
+    #body #footer #info #socialContainer{
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+     body>#footer>#info>#otherPagesContainer>.container{
+        display: grid;
+        cursor: pointer;;
+        grid:50% 50% / 30% 30%;
+    }
+    #body #footer #info #socialContainer .socialButton{
+        font-size:1.5vh;
+    }
+    #body #footer #info #otherPagesContainer{
+        grid-area: 2 / 2 / span 1 / span 2;
+    }
+    #body #footer #info #otherPagesContainer .container .title{
+        font-size:2vh;
+    }
+    #body #footer #info #otherPagesContainer .container .subtitle{
+        font-size: 1.5vh;
+        width:100%;
+    }
+    #body #footer #info #name{
+        position:relative;
+        top:30%;
+        grid-area:3 / 1 / span 1 / span 3;
+        display: flex;
+        align-items: center;
+        left:0%;
+
+    }
+    #body #footer #copyrightContainer{
+        font-size:3vw;
+    }
+}
+

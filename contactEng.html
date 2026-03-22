@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contactEng.css">
+</head>
+<body>
+    <img src="image/cheese.png" id="cheeseCursor">    </div>
+    <div id="detectArea"></div>
+
+    <div id="topBar">
+        <div id="icon">
+            <img src="image/cheese.png" id="iconImg" onclick="showCursor()">
+             <div id="text">Click for Cheese cursor</div>
+        </div>
+       
+        <div id="title">
+           <div id="pageSelectorContainer">
+                <div id="Home" class="button"> <a href="index.html"> Home</a></div>
+                <div id="Projects" class="button"> <a href="projectsEng.html"> Projects</a></div>
+                <div id="contact" class="button"> <a href="contactEng.html"> Contact</a> </div>
+           </div>
+        </div>
+
+        <div id="languageSelector">
+                <div id="tradChin" class="lang" ><a style="color:#888888;text-decoration: none;">繁</a></div>
+                <div id="simpChin" class="lang"><a style="color:#888888;text-decoration: none;">簡</a></div>
+                <div id="eng" class="lang"><a href="index.html" style="color:white;text-decoration: none;">ENG</a></div>
+        </div>
+    </div>
+
+    <div id="main" > 
+        <div id="mainTitle">Hello World!</div>
+        <div id="mainSubtitle">Although I am new to web development, I am thrilled to take on any opportunities. Let's connect!</div>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ee89de93-ed03-40f6-8118-cd33395cd8b8">
+            <div id="q1Container" class="quesContainer">
+                <div id="q1Text" class="qText">Q.1*</div>
+                <div id="q1" class="question">How may I call you?</div>
+                <input type="text" id="input1" class="input" placeholder="Alissa Tiffani" style="color:#888888" name="name" required>
+            </div>
+            <div id="q2Container" class="quesContainer">
+                <div id="q2Text" class="qText">Q.2*</div>
+                <div id="q2" class="question">What's your email?</div>
+                <input type="email" id="input2" class="input" style="color:#888888" placeholder="cheese@example.com" name="email" required>
+            </div>
+            <div id="q3Container" class="quesContainer">
+                <div id="q3Text" class="qText">Q.3*</div>
+                <div id="q3" class="question">What's the name of your organization?</div>
+                <input type="text" id="input3" class="input" style="color:#888888" placeholder="Cheese Inc." name="organization name" required>
+            </div>
+            <div id="q4Container" class="quesContainer">
+                <div id="q4Text" class="qText">Q.4*</div>
+                <div id="q4" class="question">What's your purpose of writing?</div>
+                <input type="text" id="input4" class="input" style="color:#888888" placeholder="To inquire more information about the creator" name="information" required>
+            </div>
+            <div id="q5Container" class="quesContainer">
+                <div id="q5Text" class="qText">Q.5</div>
+                <div id="q5" class="question">Any more things to add?</div>
+                <input type="text" id="input5" class="input" style="color:#888888" placeholder="Any more information?" name="addition information">
+            </div>
+            <div id="submitContainer">
+                 <button id="submit"  type="submit"> 
+                Submit
+            </button>
+            <div id="warning">
+                Please answer Q1 to Q4
+            </div>
+            </div>
+           
+        </form>
+        <div id="contactDetail">
+            <div id="pic"></div>
+            <div id="emailContainer">
+                <div id="title">
+                    Email:
+                </div>
+                <div id="emailContent">
+                    cft9438@gmail.com
+                </div>
+            </div>
+            <div id="socialContainer">
+                <div id="socialTitle">Social Media:</div>
+                <div id="socialItem2" class="socialItems" onclick="openApp(1)">Instagram</div>
+                <div id="socialItem3" class="socialItems" onclick="openApp(2)">GitHub</div>
+                <div id="socialItem4" class="socialItems" onclick="openApp(3)">LinkedIn</div>
+            </div>
+            <div id="resumeContainer">
+                <div id="resumeTitle">Download Resume:</div>
+                <div id="resumeButton">
+                    <a href="Resume.pdf" download style="color:white; text-decoration: none;">Click Here!!!</a>
+                </div>
+            </div>
+        </div>
+
+
+  
+
+        <div id="footer">
+        <div id="info">
+            <div id="hello"><p>One <label style="color:orange; font-weight: bold;">small step</label>  in coding,</p> <p style="position:relative; left:10%;"> a <label style="color:yellow; font-weight:bold;">giant leap</label> in creativity</p></div>
+            <div id="exploreContainer" class="buttonFooter" >
+                <div id="exploreTitle" style="color:lightgreen; font-weight: bold; font-size: 3vw;">Explore</div>
+                    <div id="explore1" class="exploreButton" onclick="redirect(0,2)">Home</div>
+                    <div id="explore2" class="exploreButton" onclick="redirect(1,2)">Projects</div>
+                    <div id="explore3" class="exploreButton" onclick="redirect(2,2)">Contact</div>
+            </div>
+            <div id="socialContainer" class="buttonFooter">
+                <div id="socialTitle"  style="color:lightblue; font-weight: bold; font-size: 3vw;">Follow me</div>
+                    <div id="social2" class="socialButton" onclick="openApp(1)">Instagram</div>
+                    <div id="social3" class="socialButton" onclick="openApp(2)">GitHub</div>
+                    <div id="social4" class="socialButton" onclick="openApp(3)">LinkedIn</div>
+                    
+                
+            </div>
+            <div id="otherPagesContainer" class="buttonFooter">
+                    <div id="projectContainer" class="container" onclick="redirect(0,2)">
+                        <div id="projectTitle" class="title" >Home</div>
+                        <div id="projectSubTitle" class="subtitle">Return to home page</div>
+                         <div id="arrowImgContainer">
+                            <div id="arrowImg" class="arrow"></div>
+                         </div>
+                    </div>
+                    <div id="contactContainer" class="container" onclick="redirect(2,2)">
+                         <div id="contactTitle" class="title">Projects</div>
+                        <div id="contactSubTitle" class="subtitle">Explore projects</div>
+                        <div id="arrowImgContainer">
+                            <div id="arrowImg" class="arrow"></div>
+                        </div>
+                        
+                    </div>
+            </div>
+            <div id="name">
+                Ilovecheese
+            </div>
+        </div>
+        <div id="copyrightContainer">
+            <div id="copyright">Ilovecheese ©2025</div>
+            <div id="base">Hong Kong, China</div>
+        </div>
+    </div>
+    </div>
+
+    
+
+    <script src="contactEng.js"></script>
+</body>
+</html>

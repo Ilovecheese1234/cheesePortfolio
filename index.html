@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+ 
+<body id="body" onload="language(0)">
+    <div id="blackScreen"></div>
+    <!--Cheese Cursor-->
+    <!--Hidden box that tracks the cheese cursor-->
+    <img src="image/cheese.png" id="cheeseCursor">
+    <div id="detectArea"></div>
+
+    <!--Navigation Bar-->
+     <div id="topBar">
+        <!--Cheese Cursor-->
+        <div id="icon">
+            <img src="image/cheese.png" id="iconImg" onclick="showCursor()">
+             <div id="text">Click for Cheese cursor</div>
+        </div>
+       
+        <!--Page Selection-->
+        <div id="title">
+           <div id="pageSelectorContainer">
+                <div id="Home" class="button"> <a href="index.html"> Home</a></div>
+                <div id="Projects" class="button"> <a href="projectsEng.html"> Projects</a></div>
+                <div id="contact" class="button"> <a href="contactEng.html"> Contact</a> </div>
+           </div>
+        </div>
+
+        <!--Language Selection-->
+        <div id="languageSelector">
+                <div id="tradChin" class="lang" ><a style="color:#888888;text-decoration: none;">繁</a></div>
+                <div id="simpChin" class="lang"><a style="color:#888888;text-decoration: none;">簡</a></div>
+                <div id="eng" class="lang"><a href="index.html" style="color:white;text-decoration: none;">ENG</a></div>
+        </div>
+    </div>
+
+
+    <!--Introductory Page-->
+    <div id="intro">
+
+        <!--Moving pointers circling the text in the background-->
+        <div id="movingCursor1" class="movingCursors"></div>
+        <div id="movingCursor2" class="movingCursors"></div>
+        <div id="movingCursor3" class="movingCursors"></div>
+
+
+        <!--Simple colored descriptive text about myself-->
+        <div id="introContainer">
+            <div id="text1" class="text"> 
+                <div id=text1-1 class="text"> a CS Undergrad</div>
+                <div id="text1-2" class="text">a coffeine-code converter</div>
+            </div>
+            <div id="text3" class="text"> Hong Kong, China</div>
+            <div id="text4" class="text"> Trying to survive college  </div>
+            <div id="text5" class="textTitle">I am</div>
+            <div id="text6" class="text">a Cheese-lover</div>
+            <div id="text7" class="text">New to Front-end Development</div>
+                <div id="text8" class="text"></div>
+            <div id="text9" class="text">
+                <div id="text9-1" class="text">  Suffering from Building Interface with Python</div><br>
+                <div id="text9-2" class="text">living by ChatGPT</div>
+            </div>
+        </div>
+        <div id="bottomText">Welcome to Cheese Portfolio - My first step in front-end development</div>
+    </div>
+    
+    <!--Introductory Dashboard-->
+
+    <div id="enhanceMyFace">
+        <div id="leftBackdrop" class="faceBackdrops"></div>
+        <div id="rightBackdrop" class="faceBackdrops"></div>
+
+        <div id="faceContent">
+            <div id="faceLeaveContainer">
+                <div id="faceLeave">X</div>
+            </div>
+            <div id="faceEnhanced">
+
+            </div>
+            <div id="faceCaption">Me at Victoria Park Flower Market</div>
+        </div>
+    </div>
+
+    <div id="main">
+        <!--Contact and social media-->
+        <div id="mainIcon" class="item" >
+            <div id="myFaceContainer">
+                <img src="image/myFace.jpg" id="cheesePic">
+            </div>
+            
+            <div id="info">
+                <p>Name: David Chan</p>
+                <p>Alias: Cheese</p>
+                <p>E : cft9438@gmail.com</p>
+            </div>
+            <div id="socialTitle">Social Media</div>
+            <div id="social">
+                <img src="image/insta.png" id="insta" class="icon" onclick="openApp(1)">
+                <img src="image/git.png" id="git" class="icon" onclick="openApp(2)">
+                <img src="image/link.png" id="link" class="icon" onclick="openApp(3)">
+            </div>
+        </div>
+
+        <!--Language Proficiency-->
+        <div id="languageProf" class="item">
+            <div id="languageProfTitle">Language Proficiency</div>
+            <div id="language1" class="language">
+                <div id="cantonese" class="name">Cantonese</div>
+                <div id="progressName1" class="progressName">Beginner</div>
+                <div id="progress1" class="progress">
+                    <div id="bar1" class="bar"></div>
+                </div>
+            </div>
+            <div id="language2" class="language">
+                <div id="mandarin" class="name">Mandarin</div>
+                <div id="progressName2" class="progressName">Beginner</div>
+                <div id="progress2" class="progress">
+                    <div id="bar2" class="bar" ></div>
+                </div>
+            </div>
+            <div id="language3" class="language">
+                <div id="english" class="name">English</div>
+                <div id="progressName3" class="progressName">Beginner</div>
+                <div id="progress3" class="progress">
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Personal Statement-->
+        <div id="aboutMe" class="item">
+          <div id="aboutMeTitle">About Me</div>
+          <div id="aboutMeContent">
+            Hello World! This is the first time I embark on front-end development.
+            As a CS student, I have some basic knowledge in various programming languages through projects and self-learning. With my tutoring experience,
+            I hope to merge technologies and education to enhance learning experiences.
+            <br>
+            <br>
+            By the way, move your mouse to the top and try clicking the cheese icon. :)
+          </div>
+        </div>
+
+        <!--Projects-->
+        <div id="projects" class="item">
+            <div id="projectTitle">My Work</div>
+            <div id="scroll">
+                <div id="project1" class="project">
+                    <div id="projectImg1" class="projectImg">
+                            <div id="projectItem1" class="projectItem" onclick="scrollToProject()">
+                                 <div id="projectTitle1" class="projectTitle"> Cheese Portfolio</div>
+                                <div id="projectDescp1" class="projectDescp">A simple college project built in C</div>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div id="project2" class="project" onclick="scrollToProject()">
+                    <div id="projectImg2" class="projectImg">
+                           <div id="projectItem2" class="projectItem">
+                                 <div id="projectTitle2" class="projectTitle" >Network Architecture Simulation</div>
+                                <div id="projectDescp2" class="projectDescp">My first project involving network design</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project3" class="project" onclick="scrollToProject()">
+                    <div id="projectImg3" class="projectImg">
+                           <div id="projectItem3" class="projectItem" ">
+                                 <div id="projectTitle3" class="projectTitle" >Inverse Matrix Asymmetric Encryption</div>
+                                <div id="projectDescp3" class="projectDescp">An encryption program using Python</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project4" class="project" onclick="scrollToProject()">
+                    <div id="projectImg4" class="projectImg">
+                           <div id="projectItem4" class="projectItem" ">
+                                 <div id="projectTitle4" class="projectTitle" >Optipath: Dijkstra Algorithm Visualizer</div>
+                                <div id="projectDescp4" class="projectDescp">A simple path finding program</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project5" class="project" onclick="scrollToProject()">
+                    <div id="projectImg5" class="projectImg">
+                           <div id="projectItem5" class="projectItem" ">
+                                 <div id="projectTitle5" class="projectTitle" >Path Seeker</div>
+                                <div id="projectDescp5" class="projectDescp">Finding shortest path for a maze</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project6" class="project" onclick="scrollToProject()">
+                    <div id="projectImg6" class="projectImg">
+                           <div id="projectItem6" class="projectItem" ">
+                                 <div id="projectTitle6" class="projectTitle" >SHA256 Visualizer</div>
+                                <div id="projectDescp6" class="projectDescp">My first major step in hash function</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project7" class="project" onclick="scrollToProject()">
+                    <div id="projectImg7" class="projectImg">
+                           <div id="projectItem7" class="projectItem" ">
+                                 <div id="projectTitle7" class="projectTitle" >Simple Candy Crush</div>
+                                <div id="projectDescp7" class="projectDescp">A simple game using C</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project8" class="project">Comming Soon</div>
+
+                <div id="project1" class="project">
+                    <div id="projectImg1" class="projectImg">
+                            <div id="projectItem1" class="projectItem" onclick="scrollToProject()">
+                                 <div id="projectTitle1" class="projectTitle"> Cheese Portfolio</div>
+                                <div id="projectDescp1" class="projectDescp">A simple college project built in C</div>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div id="project2" class="project" onclick="scrollToProject()">
+                    <div id="projectImg2" class="projectImg">
+                           <div id="projectItem2" class="projectItem">
+                                 <div id="projectTitle2" class="projectTitle" >Network Architecture Simulation</div>
+                                <div id="projectDescp2" class="projectDescp">My first project involving network design</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project3" class="project" onclick="scrollToProject()">
+                    <div id="projectImg3" class="projectImg">
+                           <div id="projectItem3" class="projectItem" ">
+                                 <div id="projectTitle3" class="projectTitle" >Inverse Matrix Asymmetric Encryption</div>
+                                <div id="projectDescp3" class="projectDescp">An encryption program using Python</div>
+                            </div>
+                    </div>
+                </div>
+                <div id="project4" class="project" onclick="scrollToProject()">
+                    <div id="projectImg4" class="projectImg">
+                           <div id="projectItem4" class="projectItem" ">
+                                 <div id="projectTitle4" class="projectTitle" >Optipath: Dijkstra Algorithm Visualizer</div>
+                                <div id="projectDescp4" class="projectDescp">A simple path finding program</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Technologies-->
+        <div id="programmingLangProf" class="item">
+            <div id="programmingLangProfTitle">Technology</div>
+            <div id="techContainer">
+                <div id="tech1"> 
+                    <div id="techImg1" class="techImg"></div>
+                    Python
+                    </div>
+                <div id="tech2">
+                    <div id="techImg2" class="techImg"></div>
+                    C
+                </div>
+                <div id="tech3">
+                    <div id="techImg3" class="techImg"></div>
+                    HTML
+                </div>
+                <div id="tech4">
+                    <div id="techImg4" class="techImg"></div>
+                    CSS
+                </div>
+                <div id="tech5">
+                    <div id="techImg5" class="techImg"></div>
+                    Javascript
+                </div>
+                <div id="tech6">
+                    <div id="techImg6" class="techImg"></div>
+                    Java
+                </div>
+            </div>   
+        </div>
+
+        <!--Certification-->
+        <div id="certification" class="item">
+            <div id="certificationTitle">Certification</div>
+            <div id="certContainer">
+                <div id="cert1" class="cert">
+                    <img src="image/bulletPoint2.png" class="bulletPoint">
+                    <div id="certName1" class="certName">Microsoft Azure AI Fundamentals</div>
+                </div>
+            </div>
+        </div>
+
+        <!--Working Experience-->
+        <div id="experience" class="item">
+            <div id="experienceTitle">Experience</div>
+            <div id="experienceContainer">
+                <div id="exp1" class="exp">
+                    <img src="image/bulletPoint2.png" class="bulletPoint2">
+                    <div id="expYear1" class="expYear"> 2024/5 <br>-<br> 2024/8</div>
+                    <div id="expTitle1" class="expTitle"> Tutor in Youth Mentor Program, The Hongkong Federation of Youth Groups</div>
+                </div>
+                <div id="exp2" class="exp">
+                    <img src="image/bulletPoint2.png" class="bulletPoint2">
+                    <div id="expYear1" class="expYear">2024/12 <br>-<br> 2025/5</div>
+                    <div id="expTitle1" class="expTitle"> Private Mathematic Tutor</div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Education background-->
+        <div id="education" class="item">
+            <div id="eduTitle">Education</div>
+            <div id="education1" class="educationTabs">
+                <div class="buttonContainer">
+                     <img src="image/bulletPoint.png" class="buttons">
+                </div>
+                
+                <div id="year1" class="years">2024-2025</div>
+                <div id="inst1" class="institution">The Chinese University of Hong Kong</div>
+                <div id="course1" class="courses">BSc in Computer Science and Engineering (broad-based)</div>
+            </div>
+             <div id="education2" class="educationTabs">
+                <div class="buttonContainer">
+                      <img src="image/bulletPoint.png" class="buttons">
+                </div>
+              
+                <div id="year2" class="years">2025-Pre.</div>
+                <div id="inst2" class="institution">The Chinese University of Hong Kong</div>
+                <div id="course2" class="courses">BEng in Computer Science </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!--Highlighted Projects-->
+    <div id="myProject">
+        <div id="title">Highlights</div>
+
+        <div id="project1" class="projectsMain" onclick="redirect(1,2)">
+            <div id="project1PicContainer" class="PicContainer">
+                <div id="project1Pic" class="projectPic">
+                </div>
+            </div>
+            <div id="textContainer1" class="mainTextContainer">
+                <div id="project1DesContainer" class="textContainer">
+                    <div id="project1Des." class="projectText">SHA256 Visualizer</div>
+                </div>
+                <div id="project1SubDesContainer" class="subTextContainer">
+                    <div id="project1SubDes." class="projectSubText">A website that could help visualize the process in SHA256 hashing. Traditional Chinese supported</div>
+                </div>
+            </div>
+            <div id="tech1Container" class="techContainer">
+                <div id="HTML" class="programmingLang">
+                        <div id="HTMLPic"></div>
+                        <div id="HTMLText">HTML</div>
+                </div>
+                <div id="CSS" class="programmingLang">
+                        <div id="CSSPic"></div>
+                        <div id="CSSText">CSS</div>
+                </div>
+                <div id="JS" class="programmingLang">
+                        <div id="JSPic"></div>
+                        <div id="JSText">Javascript</div>
+                </div>
+            </div> 
+        </div>
+
+        <div id="project2" class="projectsMain"  onclick="redirect(1,2)">
+            <div id="project2PicContainer" class="PicContainer">
+                <div id="project2Pic" class="projectPic"></div>
+            </div>
+            <div id="textContainer2" class="mainTextContainer">
+                <div id="project2DesContainer" class="textContainer">
+                    <div id="project2Des." class="projectText">My Portfolio</div>
+                </div>
+                <div id="project2SubDesContainer" class="subTextContainer">
+                    <div id="project2SubDes." class="project2SubText">My first attempt at front-end development. Hopefully I will get more hand-on experience on this field.</div> 
+                </div>
+            </div> 
+            <div id="tech2Container" class="techContainer">
+                <div id="HTML" class="programmingLang">
+                        <div id="HTMLPic"></div>
+                        <div id="HTMLText">HTML</div>
+                </div>
+                <div id="CSS" class="programmingLang">
+                        <div id="CSSPic"></div>
+                        <div id="CSSText">CSS</div>
+                </div>
+                <div id="JS" class="programmingLang">
+                        <div id="JSPic"></div>
+                        <div id="JSText">Javascript</div>
+                </div>
+            </div> 
+        </div>
+
+        <div id="project3" class="projectsMain"  onclick="redirect(1,2)">
+            <div id="project3PicContainer" class="PicContainer">
+                    <div id="project3Pic" class="projectPic"></div>
+            </div>
+            <div id="textContainer3" class="mainTextContainer">
+                <div id="project3DesContainer" class="textContainer">
+                    <div id="project3Des." class="projectText">Inverse Matrix Asymmetric Encryption</div>
+                </div>
+                <div id="project3SubDesContainer" class="subTextContainer">
+                    <div id="project3SubDes." class="project3SubText"> A little encryption program that involves linear algebra. <br>Try to decrypt this -> 畸甅益疜瓇睦疇瓱眥疜璼睧田甸甦甴甪畒</div>
+                </div>
+            </div>
+            <div id="tech3Container" class="techContainer">
+                <div id="python" class="programmingLang">
+                    <div id="pythonPic"></div>
+                    <div id="PythonText">Python</div>
+                </div>
+            </div>
+        </div>
+        <div id="loadMoreContainer">
+            <div id="loadMore" onclick="redirect(1,2)">See More?</div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div id="info">
+            <div id="hello"><p>One <label style="color:orange; font-weight: bold;">small step</label>  in coding,</p> <p style="position:relative; left:10%;"> a <label style="color:yellow; font-weight:bold;">giant leap</label> in creativity</p></div>
+            <div id="exploreContainer" class="buttonFooter" >
+                <div id="exploreTitle" style="color:lightgreen; font-weight: bold; grid-area:1 / 1 / span 1 / span 1">Explore</div>
+                    <div id="explore1" class="exploreButton" onclick="redirect(0,2)">Home</div>
+                    <div id="explore2" class="exploreButton" onclick="redirect(1,2)">Projects</div>
+                    <div id="explore3" class="exploreButton" onclick="redirect(2,2)">Contact</div>
+            </div>
+            <div id="socialContainer" class="buttonFooter">
+                    <div id="socialTitle"  style="color:lightblue; font-weight: bold;">Follow me</div>
+                    <div id="social2" class="socialButton" onclick="openApp(1)">Instagram</div>
+                    <div id="social3" class="socialButton" onclick="openApp(2)">GitHub</div>
+                    <div id="social4" class="socialButton" onclick="openApp(3)">LinkedIn</div>
+                    
+                
+            </div>
+            <div id="otherPagesContainer" class="buttonFooter">
+                    <div id="projectContainer" class="container" onclick="redirect(1,2)">
+                        <div id="projectTitle" class="title" >Projects</div>
+                        <div id="projectSubTitle" class="subtitle">Explore projects</div>
+                         <div id="arrowImgContainer">
+                            <div id="arrowImg" class="arrow"></div>
+                         </div>
+                    </div>
+                    <div id="contactContainer" class="container" onclick="redirect(2,2)">
+                         <div id="contactTitle" class="title">Contact</div>
+                        <div id="contactSubTitle" class="subtitle">Any jobs?</div>
+                        <div id="arrowImgContainer">
+                            <div id="arrowImg" class="arrow"></div>
+                        </div>
+                        
+                    </div>
+            </div>
+            <div id="name">
+                Ilovecheese
+            </div>
+        </div>
+        <div id="copyrightContainer">
+            <div id="copyright">Ilovecheese ©2025</div>
+            <div id="base">Hong Kong, China</div>
+        </div>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
