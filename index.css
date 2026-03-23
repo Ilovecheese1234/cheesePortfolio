@@ -612,7 +612,7 @@ body>#topBar>#closeApp{
         width:100%;
         height:60%;
         display: grid;
-        opacity:  0 ;
+        opacity:  1 ;
         grid: 90% 10%/100%;
 
     }
