@@ -78,8 +78,8 @@ if(window.innerWidth<700){
     angle++;
     let setDet1X = 30 * Math.sin(angle*Math.PI/180)+100;
     let setDet1Y = 30 * Math.cos(angle*Math.PI/180)+100;
-    let setDet2X = 50 * Math.sin(angle*Math.PI/180+5*Math.PI/4)+window.innerWidth*0.7;
-    let setDet2Y = 50 * Math.cos(angle * Math.PI/180+5*Math.PI/4)+window.innerHeight*0.4;
+    let setDet2X = 40 * Math.sin(angle*Math.PI/180+5*Math.PI/4)+window.innerWidth*0.5;
+    let setDet2Y = 40 * Math.cos(angle * Math.PI/180+5*Math.PI/4)+window.innerHeight*0.4;
 
     
     movingCursor1.style.top = `${setDet1Y}px`;
@@ -91,9 +91,9 @@ if(window.innerWidth<700){
 else{
      setInterval(()=>{
     angle++;
-    let setDet1X = 30 * Math.sin(angle*Math.PI/180)+window.innerWidth*0.25;
+    let setDet1X = 30 * Math.sin(angle*Math.PI/180)+window.innerWidth*0.2;
     let setDet1Y = 30 * Math.cos(angle*Math.PI/180)+window.innerHeight*0.3;
-    let setDet2X = 50 * Math.sin(angle*Math.PI/180+5*Math.PI/4)+window.innerWidth*0.75;
+    let setDet2X = 50 * Math.sin(angle*Math.PI/180+5*Math.PI/4)+window.innerWidth*0.7;
     let setDet2Y = 50 * Math.cos(angle * Math.PI/180+5*Math.PI/4)+window.innerHeight*0.75;
 
     
@@ -168,7 +168,32 @@ function showCursor(){
 
 }
 
+function loadMain(){
+                item.forEach((element,index)=>{
+                    element.style.transition = `ease-in-out 0.3s ${index*0.2}s `;
+                    element.style.left = "0%";
+                    element.style.right = "0%";
+                    element.style.top = "0%";
+                    element.style.bottom = "0%";
+                    element.style.opacity = "1";
+                    
+                })
+}
+function loadProject(){
+     projectsMain.forEach((element,index)=>{
+                    element.style.transition = `ease-in-out 2s ${index*0.2}s `;
+                    element.style.top = "0%";
+                    element.style.opacity = "1";
+    })
+}
+function loadFooter(){
+     buttonFooter.forEach((element,index)=>{
+                    element.style.left = "0%";
+                    element.style.opacity = "1";
+                    element.style.transition = `ease-in-out 0.9s ${index*0.5}s`;
 
+                })
+}
 //This function activate intro animation after a specific viewpoint
 let contactScreenY = window.innerHeight;
 
@@ -177,33 +202,27 @@ let contactScreenY = window.innerHeight;
         let scrollY = this.scrollY;
         let percentage = (1.1*scrollY/contactScreenY)*100;
 
-        
-        if(percentage>=50 && percentage<=180){
-            console.log(1);
-            item.forEach((element,index)=>{
-                element.style.transition = `ease-in-out 0.3s ${index*0.2}s `;
-                element.style.left = "0%";
-                element.style.right = "0%";
-                element.style.top = "0%";
-                element.style.bottom = "0%";
-                element.style.opacity = "1";
-                
-            })
+        if(window.innerWidth<450){
+             if(percentage>=20 && percentage<=200){
+                loadMain();
+            }
+            else if(percentage>200 && percentage<=320){
+               loadProject();
+            }
+            else if(percentage>320){
+                   loadFooter();
+            }
         }
-        else if(percentage>180 && percentage<=280){
-            projectsMain.forEach((element,index)=>{
-                element.style.transition = `ease-in-out 2s ${index*0.2}s `;
-                element.style.top = "0%";
-                element.style.opacity = "1";
-            })
-        }
-        else if(percentage>280){
-                buttonFooter.forEach((element,index)=>{
-                element.style.left = "0%";
-                element.style.opacity = "1";
-                element.style.transition = `ease-in-out 0.9s ${index*0.5}s`;
-
-            })
+        else{
+            if(percentage>=50 && percentage<=180){
+                loadMain();
+            }
+            else if(percentage>180 && percentage<=280){
+               loadProject();
+            }
+            else if(percentage>280){
+                   loadFooter();
+            }
         }
 })
 
