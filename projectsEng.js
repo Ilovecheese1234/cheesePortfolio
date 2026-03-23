@@ -139,7 +139,7 @@ window.addEventListener("mousemove",(e)=>{
 window.addEventListener("scroll",(e)=>{
     projects.forEach((element,index)=>{
         let scrollPercentage = window.scrollY / element.offsetTop * 100;
-        if(scrollPercentage>40 && scrollPercentage<100){
+        if(scrollPercentage>20 && scrollPercentage<100 ){
             if(index%2==0){
                 element.style.right = "0%"
             }

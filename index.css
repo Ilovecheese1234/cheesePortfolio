@@ -1474,7 +1474,14 @@ body>#topBar{
     width:100vw;
     height:10vh;
 }
-
+body>#topBar>#icon>#iconImg{
+    position:relative;
+    width:min(5vw,5vh);
+    height:min(5vw,5vh);
+}
+body>#topBar>#icon>#text{
+    font-size: min(2vw,2vh);
+}
 body>#detectArea{
     position:fixed;
     width:100vw;
@@ -1492,7 +1499,7 @@ body>#topBar>#languageSelector>.lang{
 }
 #body>#intro{
     position:relative;
-    height:80vh;
+    height:60vh;
     width:100vw;
 }
 #body>#intro>#introContainer>.textTitle{
@@ -1519,22 +1526,22 @@ body>#topBar>#languageSelector>.lang{
     #body #main{
         position:relative;
         display: grid;
-        height:350vh;
+        height:300vh;
         width:90%;
-        grid: 30% 10% 10% 15% 10% 10% 10% 15%/ 100%;
+        grid: 20% 10% 10% 10% 10% 10% 10% 15%/ 100%;
     }
     #body #main #mainIcon{
         grid-area: 1 / 1 / span 1 / span 1;
     }
     #body #main #mainIcon #myFaceContainer #cheesePic{
-        height:max(20vw,20vh);
-        width:max(20vw,20vh);
+        height:max(10vw,10vh);
+        width:max(10vw,10vh);
     }
     #body #main #mainIcon #info{
-        font-size: max(2vw,2vh);
+        font-size: max(1.5vw,1.5vh);
     }
     #body #main #mainIcon #socialTitle{
-        font-size:max(2vw,2vh);
+        font-size:max(1.5vw,1.5vh);
         position:relative;
         top:0%;
         left:2vw;
@@ -1542,8 +1549,8 @@ body>#topBar>#languageSelector>.lang{
 
     #body #main #mainIcon #social .icon{
         position:relative;
-        width:max(5vw,5vh);
-        height:max(5vw,5vh);
+        width:max(3vw,3vh);
+        height:max(3vw,3vh);
     }
 
 
@@ -1638,9 +1645,9 @@ body>#topBar>#languageSelector>.lang{
     }
     #body #myProject{
         position:relative;
-        height:200vh;
+        height:170vh;
         width:100%;
-        top:60vh;
+        top:5vh;
         display: grid;
         grid: 4% 27% 27% 27% 9% / 100%;
         grid-gap: 2%;
@@ -1674,10 +1681,10 @@ body>#topBar>#languageSelector>.lang{
         justify-content: center;
     }
     #body #myProject .projectsMain .textContainer{
-        font-size: 4vw;
+        font-size: min(4vw,4vh);
     }
     #body #myProject .projectsMain .subTextContainer{
-        font-size: 2.5vw;
+        font-size: min(2.5vw,2.5vh);
         display: flex;
         align-self: center;
         justify-self: center;
@@ -1696,8 +1703,8 @@ body>#topBar>#languageSelector>.lang{
     
     #body #footer{
         position:relative;
-        height:5%;
-        top:65vh;
+        height:35vh;
+        top:10vh;
        
     }
     body>#footer>#info{
@@ -1729,11 +1736,11 @@ body>#topBar>#languageSelector>.lang{
     justify-content: center;
    }
     #body #footer #info div #exploreTitle{
-        font-size:3vw;
+        font-size:2.5vw;
         grid-area: 2 / 1 / span 1 / span 1;
     }
     #body #footer #info #exploreContainer .exploreButton{
-        font-size:1.5vh;
+        font-size:2vw;
     }
     #body #footer #info #socialContainer{
         grid-area: 1 / 3 / span 1 / span 1;
@@ -1744,16 +1751,16 @@ body>#topBar>#languageSelector>.lang{
         grid:50% 50% / 30% 30%;
     }
     #body #footer #info #socialContainer .socialButton{
-        font-size:1.5vh;
+        font-size:2vw;
     }
     #body #footer #info #otherPagesContainer{
         grid-area: 2 / 2 / span 1 / span 2;
     }
     #body #footer #info #otherPagesContainer .container .title{
-        font-size:2vh;
+        font-size:2.5vw;
     }
     #body #footer #info #otherPagesContainer .container .subtitle{
-        font-size: 1.5vh;
+        font-size: 2vw;
         width:100%;
     }
     #body #footer #info #name{
