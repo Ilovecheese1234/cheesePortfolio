@@ -10,18 +10,56 @@ const leftBackdrop = document.getElementById("leftBackdrop");
 const rightBackdrop = document.getElementById("rightBackdrop");
 const enhanceMyFace = document.getElementById("enhanceMyFace");
 const faceLeave = document.getElementById("faceLeave");
+const main = document.getElementById("main");
 
 const projectsMain = document.querySelectorAll(".projectsMain")
 const myProject = document.querySelectorAll(".myProject")
-
 const loadMore = document.getElementById("loadMore");
-
+const footer = document.getElementById("footer");
 const movingCursor1 = document.getElementById("movingCursor1");
 const movingCursor2 = document.getElementById("movingCursor2");
 const item = document.querySelectorAll(".item"); 
 const icon = document.querySelectorAll(".icon");
 
 const buttonFooter = document.querySelectorAll(".buttonFooter");
+const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
+if(window.outerWidth / window.outerHeight > 2.3){
+        screenSizeIncompatible.style.opacity = "1";
+        screenSizeIncompatible.style.zIndex = "100000";
+
+        for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "0";
+                body.children[i].style.zIndex = "-100";
+            }
+            
+        }
+    }
+window.addEventListener("resize",()=>{
+    if(window.outerWidth / window.outerHeight > 2.3){
+        screenSizeIncompatible.style.opacity = "1";
+        screenSizeIncompatible.style.zIndex = "100000";
+        for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "0";
+                body.children[i].style.zIndex = "-100";
+            }
+            
+        }
+    }
+    else{
+         screenSizeIncompatible.style.opacity = "0";
+        screenSizeIncompatible.style.zIndex = "-100000";
+         for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0 && i!=5){
+                body.children[i].style.opacity = "1";
+                body.children[i].style.zIndex = "100";
+            }
+            
+        }
+    }
+})
+
 
 icon.forEach((element,index,arr) => {
     element.addEventListener("mouseover",(e)=>{

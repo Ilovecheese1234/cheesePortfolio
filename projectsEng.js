@@ -10,6 +10,41 @@ const prevPage = document.getElementById("prevPage");
 const nextPage = document.getElementById("nextPage");
 const curPage = document.getElementById("curPage");
 const mainContainer = document.getElementById("mainContainer");
+const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
+if(window.outerWidth / window.outerHeight > 2.3){
+        screenSizeIncompatible.style.opacity = "1";
+        screenSizeIncompatible.style.zIndex = "100000";
+
+        for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "0";
+            }
+            
+        }
+    }
+window.addEventListener("resize",()=>{
+    if(window.outerWidth / window.outerHeight > 2.3){
+        screenSizeIncompatible.style.opacity = "1";
+        screenSizeIncompatible.style.zIndex = "10000000";
+        for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "0";
+                        
+            }
+            
+        }
+    }
+    else{
+         screenSizeIncompatible.style.opacity = "0";
+        screenSizeIncompatible.style.zIndex = "-100000";
+         for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0 && i!=3){
+                body.children[i].style.opacity = "1";
+            }
+            
+        }
+    }
+})
 
 var page = 1
 var maxPage = 2

@@ -1,3 +1,4 @@
+
 const topBar = document.getElementById("topBar");
 const detectArea = document.getElementById("detectArea");
 const cheeseCursor = document.getElementById("cheeseCursor");
@@ -12,6 +13,41 @@ const mainSubtitle = document.getElementById("mainSubtitle");
 const quesContainer = document.querySelectorAll(".quesContainer");
 const contactDetail = document.getElementById("contactDetail");
 const warning = document.getElementById("warning");
+const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
+if(window.outerWidth / window.outerHeight > 2.3){
+        screenSizeIncompatible.style.opacity = "1";
+        screenSizeIncompatible.style.zIndex = "100000";
+
+        for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "0";
+            }
+            
+        }
+    }
+window.addEventListener("resize",()=>{
+    if(window.outerWidth / window.outerHeight > 2.3){
+        screenSizeIncompatible.style.opacity = "1";
+        screenSizeIncompatible.style.zIndex = "10000000";
+        for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "0";
+                        
+            }
+            
+        }
+    }
+    else{
+         screenSizeIncompatible.style.opacity = "0";
+        screenSizeIncompatible.style.zIndex = "-100000";
+         for(var i = 0 ;i<body.children.length;i++){
+            if(i!=0){
+                body.children[i].style.opacity = "1";
+            }
+            
+        }
+    }
+})
 
 
 window.addEventListener("mousemove",(e)=>{

@@ -7,6 +7,18 @@ body{
     justify-content: center;
         overflow-x:hidden;
 }
+body>#screenSizeIncompatible{
+    position: absolute;
+    top: 0%;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    opacity: 0;
+    height:100vh;
+    background-color: black;
+}
 body>#cursorDesc{
     position:absolute;
     width:20%;
