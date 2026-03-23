@@ -34,8 +34,8 @@ body>#detectArea{
 #cheeseCursor{
     position:absolute;
     z-index: 10;
-    height:3vw;
-    width:3vw;
+    height:3svw;
+    width:3svw;
     animation: moveCursor 10s forwards infinite linear;
     opacity:0;
     z-index:-10;
@@ -59,7 +59,7 @@ body>#topBar{
     align-items: center;
     top:-20%;
     z-index:11;
-        font-size: 1.5vw;
+        font-size: 1.5svw;
     transition: linear 0.3s;
 }
 
@@ -68,8 +68,8 @@ body>#topBar>#icon{
     justify-content: center;
     align-items: center;
     position:relative;
-    height:3vw;
-    width:3vw;
+    height:3svw;
+    width:3svw;
     margin-left: 3%;
     cursor:pointer;
     border-radius: 5px;
@@ -77,7 +77,7 @@ body>#topBar>#icon{
 }
 body>#topBar>#title{
     color:white;
-   font-size:1.5vw;
+   font-size:1.5svw;
     font-weight: bold;
     position:relative;
     width:60%;
@@ -111,7 +111,7 @@ body>#topBar>#languageSelector{
     align-items: center;
     justify-content: space-between;
     color:white;
-    font-size:1.5vw;
+    font-size:1.5svw;
 }
 body>#topBar>#languageSelector>.lang{
     cursor: pointer;
@@ -194,7 +194,7 @@ body>#topBar>#closeApp{
 #main #mainTitle{
     grid-area: 1 / 1 / span 1 / span 2;
     position:relative;
-    font-size:3.5vw;
+    font-size:3.5svw;
     font-weight: bolder;
     padding-left:3%;
     display:inline-flex;
@@ -209,7 +209,7 @@ body>#topBar>#closeApp{
 #main #mainSubtitle{
     grid-area: 2 / 1 / span 1 / span 2;
     padding-left: 3%;
-    font-size:2vw;
+    font-size:2svw;
     color:rgb(253, 249, 207);
     position:relative;
       left:-10%;
@@ -248,19 +248,19 @@ body>#topBar>#closeApp{
 
 #main #form .quesContainer .qText{
     grid-area: 1 / 1 / span 1 / span 1;
-    font-size:3vh;
+    font-size:3svh;
 
 }
 
 #main #form .quesContainer .qText{
     grid-area: 1 / 1 / span 1 / span 1;
-    font-size:3vh;
+    font-size:3svh;
 }
 
 #main #form .quesContainer .question{
     grid-area: 1 / 2 / span 1 / span 1;
     font-weight: bolder;
-    font-size:3vh;
+    font-size:3svh;
 }
 
 #main #form .quesContainer .input{
@@ -270,7 +270,7 @@ body>#topBar>#closeApp{
     border-color: transparent;
     color:white;
     outline:transparent;
-    font-size:2.5vh;
+    font-size:2.5svh;
 }
 
 #main>#form>.quesContainer:has(.input:focus){
@@ -281,8 +281,8 @@ body>#topBar>#closeApp{
     position:relative;
     display: inline-flex;
     align-self: last baseline;
-    width:20vw;
-    height:max(10vh,10vw);
+    width:20svw;
+    height:max(10svh,10svw);
     align-items: center;
     justify-self: center;
 }
@@ -300,7 +300,7 @@ body>#topBar>#closeApp{
     align-items: center;
     justify-content: center;
     font-weight: bolder;
-    font-size: 1.5vw;
+    font-size: 1.5svw;
     cursor: pointer;
     overflow:hidden;
     background-color: black;
@@ -317,8 +317,8 @@ body>#topBar>#closeApp{
     background-color: cyan;
 
     display: inline-flex;
-    width:2vw;
-    height:2vw;
+    width:2svw;
+    height:2svw;
 
     top:100%;
     border-radius: 40px;
@@ -328,8 +328,8 @@ body>#topBar>#closeApp{
 
 #main form #submitContainer #submit:hover:after {
     top:0%;
-    width:50vw;
-    height:50vh;
+    width:50svw;
+    height:50svh;
 }
 
 #main form #submitContainer #submit:hover{
@@ -351,7 +351,7 @@ body>#topBar>#closeApp{
     align-items: center;
     justify-content: center;
     font-weight: bolder;
-    font-size: 1vw;
+    font-size: 1svw;
     cursor: pointer;
     overflow:hidden;
     background-color: black;
@@ -374,24 +374,24 @@ body>#topBar>#closeApp{
     background-image: url("image/cheese.png");
     background-size: contain;
     background-color: #DDDDDD;
-    border:1vw solid #DDDDDD;
+    border:1svw solid #DDDDDD;
     border-radius:10000px;
     position:relative;
-    width:10vw;
-    height:10vw;
+    width:10svw;
+    height:10svw;
     display: inline-flex;
     justify-self: center;
     position:relative;
-    height:10vh;
-    width:10vh;
+    height:10svh;
+    width:10svh;
 
     
 }
 
 #main #contactDetail #emailContainer{
     grid-area: 2 / 1 / span 1 / span 1;
-    font-size:1.3vw;
-    top:1vh;
+    font-size:1.3svw;
+    top:1svh;
     position:relative;
     height:100%;
     width:100%;
@@ -412,8 +412,8 @@ body>#topBar>#closeApp{
 
 #main #contactDetail #socialContainer{
     grid-area: 3 / 1 / span 1 / span 1;
-    font-size: 1.3vw;
-    top:1vh;
+    font-size: 1.3svw;
+    top:1svh;
     position:relative;
     display: inline-flex;
     flex-direction: column;
@@ -436,9 +436,9 @@ body>#topBar>#closeApp{
 
 #main #contactDetail #resumeContainer{
     grid-area: 4 / 1 / span 1 / span 1;
-    font-size:1.3vw;
-    top:1vh;
-    position: 1vh;
+    font-size:1.3svw;
+    top:1svh;
+    position: 1svh;
     display: inline-flex;
     position:relative;
     flex-direction: column;
@@ -463,8 +463,8 @@ body>#topBar>#closeApp{
 #main #contactDetail #resumeContainer #resumeButton:after{
     content:"";
     position:absolute;
-    width:2vw;
-    height:2vw;
+    width:2svw;
+    height:2svw;
     top:100%;
     border-radius: 100px;
     background-color: cyan;
@@ -472,8 +472,8 @@ body>#topBar>#closeApp{
     z-index:-1;
 }
 #main #contactDetail #resumeContainer #resumeButton:hover:after{
-    width:20vw;
-    height:10vh;
+    width:20svw;
+    height:10svh;
     top:0;
 }
 #footer{
@@ -512,7 +512,7 @@ body>#topBar>#closeApp{
         width:100%;
         padding-top:5%;
         padding-left:5%;
-        font-size: 2vw;
+        font-size: 2svw;
         display: flex;
         flex-direction: column;
     }
@@ -522,7 +522,7 @@ body>#topBar>#closeApp{
         height:100%;
         width:100%;
         display: grid;
-        font-size: 1vw;
+        font-size: 1svw;
         grid: 30% 17% 17% 17% / auto;
         top:10%;
 
@@ -565,7 +565,7 @@ body>#topBar>#closeApp{
         grid-area: 1/ 1 / span 1 / span 2;
     }
     #footer>#info>#socialContainer>.socialButton{
-        font-size:1vw;
+        font-size:1svw;
         cursor:pointer;
         position:relative;
         width:fit-content;
@@ -605,7 +605,7 @@ body>#topBar>#closeApp{
     #footer>#info>#otherPagesContainer>.container>.title{
         grid-area: 1 / 1 / span 1 / span 1;
         font-weight:bold;
-        font-size:1.5vw;
+        font-size:1.5svw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -616,7 +616,7 @@ body>#topBar>#closeApp{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size:0.75vw;
+        font-size:0.75svw;
         color:var(--mainFontColor);
         transition:linear 0.1s;
     }
@@ -635,8 +635,8 @@ body>#topBar>#closeApp{
          background-repeat: no-repeat;
         background-size: contain;
         position:relative;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
         transition:ease-out 0.1s;
     }
     #footer>#info>#otherPagesContainer>.container:hover > .title{
@@ -651,7 +651,7 @@ body>#topBar>#closeApp{
         display: flex;
         justify-content: center;
         align-items: last baseline;
-        font-size:15vw;
+        font-size:15svw;
         bottom:-60%;
 
     }
@@ -662,7 +662,7 @@ body>#topBar>#closeApp{
         justify-content: space-between;
         padding-left:2%;
         padding-right: 2%;
-        font-size:1.5vw;
+        font-size:1.5svw;
     }
 
 @media (max-width:450px){
@@ -670,38 +670,38 @@ body>#topBar>#closeApp{
     grid: 15% auto 100%/ 65.5% 29.5%;
 }
 body>#topBar>#title{
-   font-size:4vw;
+   font-size:4svw;
 }
 body>#topBar>#languageSelector{
     width:15%;
 }
 body>#topBar>#languageSelector>.lang{
-    font-size: 3vw;
+    font-size: 3svw;
 }
 body>#topBar>#icon>#iconImg{
     position:relative;
-    width:min(5vw,5vh);
-    height:min(5vw,5vh);
+    width:min(5svw,5svh);
+    height:min(5svw,5svh);
 }
 body>#topBar>#icon>#text{
-    font-size: min(2vw,2vh);
+    font-size: min(2svw,2svh);
 }
 #main #mainTitle{
-    font-size: 7vw;
+    font-size: 7svw;
 }
 #main #mainSubtitle{
-    font-size:4vw;
+    font-size:4svw;
 }
 
 #main form #submitContainer{
     position:relative;
-    height:5vh;
-    width:20vw;
+    height:5svh;
+    width:20svw;
 
 }
 
 #main form #submitContainer #submit{
-    font-size:max(1vw,1vh);
+    font-size:max(1svw,1svh);
 
 }
 
@@ -709,7 +709,7 @@ body>#topBar>#icon>#text{
     grid-area: 3 / 2 / span 1 / span 1;
     position:relative;
     display:inline-grid;
-    height:60vh;
+    height:60svh;
     opacity: 0;
     left:-10%;
     grid: 15% 15% 40% 15%/ 100%;
@@ -719,7 +719,7 @@ body>#topBar>#icon>#text{
 
   body #main #footer{
         position:relative;
-        height:35vh;
+        height:35svh;
         top:2%;
     }
     body #main #footer #info{
@@ -740,7 +740,7 @@ body>#topBar>#icon>#text{
 
     }
      body #main #footer #info #hello{
-        font-size:2.5vw;
+        font-size:2.5svw;
         grid-area: 1/ 1/ span 2 / span 1;
     }
      
@@ -753,11 +753,11 @@ body>#topBar>#icon>#text{
    }
     body #main #footer #info div #exploreTitle{
         position:relative;
-        font-size:3vw;
+        font-size:3svw;
         grid-area: 2 / 1 / span 1 / span 1;
     }
     body #main #footer #info #exploreContainer .exploreButton{
-        font-size:1.5vw;
+        font-size:1.5svw;
     }
     body #main #footer #info #socialContainer{
         grid-area: 1 / 3 / span 1 / span 1;
@@ -768,17 +768,17 @@ body>#topBar>#icon>#text{
         grid:50% 50% / 30% 30%;
     }
     body #main #footer #info #socialContainer .socialButton{
-        font-size:1.5vw;
+        font-size:1.5svw;
     }
     body #main #footer #info #otherPagesContainer{
         grid-area: 2 / 2 / span 1 / span 2;
         
     }
     body #main #footer #info #otherPagesContainer .container .title{
-        font-size:2vw;
+        font-size:2svw;
     }
     body #main #footer #info #otherPagesContainer .container .subtitle{
-        font-size: 1.5vw;
+        font-size: 1.5svw;
         width:100%;
     }
     body #main #footer #info #otherPagesContainer .container #arrowImgContainer{
@@ -795,47 +795,47 @@ body>#topBar>#icon>#text{
 
     }
     body #main #footer #copyrightContainer{
-        font-size:3vw;
+        font-size:3svw;
     }
 
     
 #main #form .quesContainer .qText{
-    font-size:3vw;
+    font-size:3svw;
 
 }
 
 #main #form .quesContainer .qText{
-    font-size:3vw;
+    font-size:3svw;
 }
 
 #main #form .quesContainer .question{
-    font-size:3vw;
+    font-size:3svw;
 }
 
 #main #form .quesContainer .input{
-    font-size:2.5vw;
+    font-size:2.5svw;
 }
 #main #contactDetail #emailContainer{
     word-wrap: break-word;
 }
 #main #contactDetail #emailContainer #title{
-    font-size: 3vw;
+    font-size: 3svw;
 }
 #main #contactDetail #emailContainer #emailContent{
-    font-size:2vw;
+    font-size:2svw;
 }
 #main #contactDetail #socialContainer #socialTitle{
-    font-size: 3vw;
+    font-size: 3svw;
 }
 #main #contactDetail #socialContainer .socialItems{
-    font-size: 2vw;
+    font-size: 2svw;
 }
 #main #contactDetail #resumeContainer #resumeTitle{
-    font-size:3vw;
+    font-size:3svw;
 }
 #main #contactDetail #resumeContainer #resumeButton{
     width:80%;
     height:50%;
-    font-size: 2.5vw;
+    font-size: 2.5svw;
 }
 }

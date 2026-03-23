@@ -17,7 +17,7 @@ body>#cursorDesc{
     align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1vw;
+    font-size: 1svw;
     z-index:10;
     transition: 0.2s linear;
     opacity: 0;
@@ -34,8 +34,8 @@ body>#detectArea{
 #cheeseCursor{
     position:absolute;
     z-index: 1000;
-    height:3vw;
-    width:3vw;
+    height:3svw;
+    width:3svw;
     animation: moveCursor 10s forwards infinite linear;
     opacity:0;
     z-index:-10;
@@ -59,7 +59,7 @@ body>#topBar{
     align-items: center;
     top:-20%;
     z-index:11;
-        font-size: 1.5vw;
+        font-size: 1.5svw;
     transition: linear 0.3s;
 }
 
@@ -68,8 +68,8 @@ body>#topBar>#icon{
     justify-content: center;
     align-items: center;
     position:relative;
-    height:3vw;
-    width:3vw;
+    height:3svw;
+    width:3svw;
     margin-left: 3%;
     cursor:pointer;
     border-radius: 5px;
@@ -77,7 +77,7 @@ body>#topBar>#icon{
 }
 body>#topBar>#title{
     color:white;
-   font-size:1.5vw;
+   font-size:1.5svw;
     font-weight: bold;
     position:relative;
     width:60%;
@@ -111,7 +111,7 @@ body>#topBar>#languageSelector{
     align-items: center;
     justify-content: space-between;
     color:white;
-    font-size:1.5vw;
+    font-size:1.5svw;
 }
 body>#topBar>#languageSelector>.lang{
     cursor: pointer;
@@ -190,7 +190,7 @@ body>#mainContainer{
 }
 body>#mainContainer>#title{
     color:white;
-    font-size:2.75vw;
+    font-size:2.75svw;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -273,7 +273,7 @@ body>#mainContainer>.projects:nth-child(2n-1)>.imageContainer{
 }
 body>#mainContainer>.projects>.projectTitle{
     position:relative;
-    font-size:2.5vw;
+    font-size:2.5svw;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -292,7 +292,7 @@ body>#mainContainer>.projects:nth-child(2n-1)>.projectTitle{
 
 body>#mainContainer>.projects>.projectDesc{
     color:#AAAAAA;
-    font-size:1vw;
+    font-size:1svw;
 }
 body>#mainContainer>.projects:nth-child(2n)>.projectDesc{
     grid-area: 2 / 2 / span 1 / span 1;
@@ -316,7 +316,7 @@ body>#mainContainer>.projects>.direct{
     overflow: hidden;
      cursor:none;
     z-index:10;
-    font-size: 2vh;
+    font-size: 2svh;
 }
 body>#mainContainer>.projects:nth-child(2n)>.direct{
     grid-area: 3 / 2 / span 1 / span 1;
@@ -329,8 +329,8 @@ body>#mainContainer>.projects>.direct:after{
     content:"";
     position:absolute;
     display: flex;
-    width:5vw;
-    height:5vw;
+    width:5svw;
+    height:5svw;
     background-color: orange;
     border-radius: 100%;
     transition: ease-in-out 0.2s;
@@ -369,7 +369,7 @@ body>#mainContainer>#pageSelectorContainer{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-size: min(4vh,4vw);
+    font-size: min(4svh,4svw);
     color:#ddd;
     grid-area: 6 / 1  / span 1 / span 1;
     
@@ -422,7 +422,7 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
         width:100%;
         padding-top:5%;
         padding-left:5%;
-        font-size: 2vw;
+        font-size: 2svw;
         display: flex;
         flex-direction: column;
     }
@@ -432,13 +432,13 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
         height:100%;
         width:100%;
         display: grid;
-        font-size: 1vw;
+        font-size: 1svw;
         grid: 30% 17% 17% 17% / auto;
         top:10%;
 
     }
     body #mainContainer #footer #info div #exploreTitle{
-        font-size:2vw;
+        font-size:2svw;
     }
     body>#mainContainer>#footer>#info>#exploreContainer>.exploreButton{
         cursor: pointer;
@@ -476,10 +476,10 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
     }
     body>#mainContainer>#footer>#info>#socialContainer>#socialTitle{
         grid-area: 1/ 1 / span 1 / span 2;
-        font-size: 2vw;
+        font-size: 2svw;
     }
     body>#mainContainer>#footer>#info>#socialContainer>.socialButton{
-        font-size:1vw;
+        font-size:1svw;
         cursor:pointer;
         position:relative;
         width:fit-content;
@@ -519,7 +519,7 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
     body>#mainContainer>#footer>#info>#otherPagesContainer>.container>.title{
         grid-area: 1 / 1 / span 1 / span 1;
         font-weight:bold;
-        font-size:1.5vw;
+        font-size:1.5svw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -530,7 +530,7 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size:0.75vw;
+        font-size:0.75svw;
         color:var(--mainFontColor);
         transition:linear 0.1s;
     }
@@ -549,8 +549,8 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
          background-repeat: no-repeat;
         background-size: contain;
         position:relative;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
         transition:ease-out 0.1s;
     }
     body>#mainContainer>#footer>#info>#otherPagesContainer>.container:hover > .title{
@@ -565,7 +565,7 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
         display: flex;
         justify-content: center;
         align-items: last baseline;
-        font-size:15vw;
+        font-size:15svw;
         bottom:-50%;
 
     }
@@ -576,39 +576,39 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{
         justify-content: space-between;
         padding-left:2%;
         padding-right: 2%;
-        font-size:1.5vw;
+        font-size:1.5svw;
     }
 
 @media (max-width:450px){
 body>#topBar>#title{
-   font-size:4vw;
+   font-size:4svw;
 }
 body>#topBar>#languageSelector{
     width:15%;
-    font-size:3vw;
+    font-size:3svw;
 }
 body>#topBar>#icon>#iconImg{
     position:relative;
-    width:min(5vw,5vh);
-    height:min(5vw,5vh);
+    width:min(5svw,5svh);
+    height:min(5svw,5svh);
 }
 body>#topBar>#icon>#text{
-    font-size: min(2vw,2vh);
+    font-size: min(2svw,2svh);
 }
 body #mainContainer #title{
-    font-size: 7vw;
+    font-size: 7svw;
 }
 body>#mainContainer{
     position:absolute;
     grid-gap: 20px;
     top:0%;
-    height:60vh;
+    height:60svh;
     display: grid;
     grid:20% 50% 50% 50% 50% 10% 100%/ auto;
 }
 body>#mainContainer>.projects{
     position:relative;
-    height:30vh;
+    height:30svh;
 }
 body>#mainContainer>.projects:nth-child(2n){
     grid: 35% 50% 15%/ 50% 50%;
@@ -620,14 +620,14 @@ body>#mainContainer>.projects:nth-child(2n-1){
     left:-30%;
 }
 body #mainContainer .projects .projectTitle{
-    font-size:3vw;
+    font-size:3svw;
 }
 body #mainContainer .projects .projectDesc{
-    font-size:1.5vw;
+    font-size:1.5svw;
 }
  body #mainContainer #footer{
         position:relative;
-        height:35vh;
+        height:35svh;
         top:2%;
     }
 
@@ -648,7 +648,7 @@ body #mainContainer .projects .projectDesc{
 
     }
      body #mainContainer #footer #info #hello{
-        font-size:3vw;
+        font-size:3svw;
         grid-area: 1/ 1/ span 2 / span 1;
     }
      
@@ -660,11 +660,11 @@ body #mainContainer .projects .projectDesc{
     justify-content: center;
    }
     body #mainContainer #footer #info div #exploreTitle{
-        font-size:2.5vw;
+        font-size:2.5svw;
         grid-area: 2 / 1 / span 1 / span 1;
     }
     body #mainContainer #footer #info #exploreContainer .exploreButton{
-        font-size:1.5vw;
+        font-size:1.5svw;
     }
     body #mainContainer #footer #info #socialContainer{
         grid-area: 1 / 3 / span 1 / span 1;
@@ -675,10 +675,10 @@ body #mainContainer .projects .projectDesc{
         grid: 20% 20% 20% 20% 20%/ auto;
     }
     body #mainContainer #footer #info #socialContainer #socialTitle{
-        font-size:3vw;
+        font-size:3svw;
     }
     body #mainContainer #footer #info #socialContainer .socialButton{
-        font-size:1.5vw;
+        font-size:1.5svw;
         grid-area: auto / auto /auto /auto;
     }
      body #mainContainer #footer #info #socialContainer #social3{grid-area: 3 / 1 / span 1 / span 1;
@@ -698,10 +698,10 @@ body #mainContainer .projects .projectDesc{
         left:20%;
     }
     body #mainContainer #footer #info #otherPagesContainer .container .title{
-        font-size:2vw;
+        font-size:2svw;
     }
     body #mainContainer #footer #info #otherPagesContainer .container .subtitle{
-        font-size: 1.5vw;
+        font-size: 1.5svw;
         width:100%;
     }
     body #mainContainer #footer #info #otherPagesContainer .container #arrowImgContainer{
@@ -720,6 +720,6 @@ body #mainContainer .projects .projectDesc{
 
     }
     body #mainContainer #footer #copyrightContainer{
-        font-size:3vw;
+        font-size:3svw;
     }
 }

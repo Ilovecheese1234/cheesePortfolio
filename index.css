@@ -30,8 +30,8 @@ body{
 #cheeseCursor{
     position:absolute;
     z-index: 10;
-    height:3vw;
-    width:3vw;
+    height:3svw;
+    width:3svw;
     animation: moveCursor 10s forwards infinite linear;
     opacity:0;
     z-index:-10;
@@ -62,7 +62,7 @@ body>#topBar{
     align-items: center;
     top:-20%;
     z-index:11;
-        font-size: 1.5vw;
+        font-size: 1.5svw;
     transition: linear 0.3s;
 }
 
@@ -71,8 +71,8 @@ body>#topBar>#icon{
     justify-content: center;
     align-items: center;
     position:relative;
-    height:3vw;
-    width:3vw;
+    height:3svw;
+    width:3svw;
     margin-left: 3%;
     cursor:pointer;
     border-radius: 5px;
@@ -80,7 +80,7 @@ body>#topBar>#icon{
 }
 body>#topBar>#title{
     color:white;
-   font-size:1.5vw;
+   font-size:1.5svw;
     font-weight: bold;
     position:relative;
     width:60%;
@@ -114,7 +114,7 @@ body>#topBar>#languageSelector{
     align-items: center;
     justify-content: space-between;
     color:white;
-    font-size:1.5vw;
+    font-size:1.5svw;
 }
 body>#topBar>#languageSelector>.lang{
     cursor: pointer;
@@ -217,12 +217,12 @@ body>#topBar>#closeApp{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:2.5vw;
+    font-size:2.5svw;
     font-weight: bold;
 }
 
     #body>#intro>#introContainer>.text{
-        font-size:2vw;
+        font-size:2svw;
     }
    #body>#intro>#introContainer>#text1{
         display: flex;
@@ -346,17 +346,17 @@ body>#topBar>#closeApp{
     }
     #body #intro #bottomText{
         color:white;
-        font-size:1.5vw;
+        font-size:1.5svw;
 
     }
     #body>#intro>#movingCursor1{
         position:absolute;
-        width:2vw;
-        height:2vw;
+        width:2svw;
+        height:2svw;
         background-image: url("image/pointer.png");
         background-size: contain;
         background-repeat: no-repeat;
-        left:100vw;
+        left:100svw;
         z-index:1;
     }
 
@@ -368,7 +368,7 @@ body>#topBar>#closeApp{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding:30%;
         border-radius: 20%;
-        font-size: min(3vw,3vh);
+        font-size: min(3svw,3svh);
         color:white;
         background-color: aqua;   
         z-index: -10; 
@@ -376,11 +376,11 @@ body>#topBar>#closeApp{
 
     #body>#intro>#movingCursor2{
         position:absolute;
-        width:2vw;
-        height:2vw;
+        width:2svw;
+        height:2svw;
         background-image: url("image/pointer2.png");
         background-size: contain;
-        font-size: min(3vw,3vh);
+        font-size: min(3svw,3svh);
         background-repeat: no-repeat;
         z-index:-110;
     }
@@ -411,7 +411,7 @@ body>#topBar>#closeApp{
         grid-area:1 / 1 / span 1 / span 3;
         height:100%;
         color:white;
-        font-size: 3vw;
+        font-size: 3svw;
         font-weight:bold;
         display: flex;
         align-items:last baseline;
@@ -468,11 +468,11 @@ body>#topBar>#closeApp{
         font-weight: bold;
         z-index:10;
         margin-top:10%;
-        font-size: max(1.5vw,1.5vh);
+        font-size: max(1.5svw,1.5svh);
     }
     body>#myProject>.projectsMain>.mainTextContainer>.subTextContainer{
         color:#AAAAAA;
-        font-size:0.8vw;
+        font-size:0.8svw;
         z-index:10;
     }
 
@@ -495,7 +495,7 @@ body>#topBar>#closeApp{
         justify-content: space-evenly;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
-        font-size: max(1vw,1vh);
+        font-size: max(1svw,1svh);
         color:var(--mainFontColor);
 
      }
@@ -512,8 +512,8 @@ body>#topBar>#closeApp{
         position:relative;
         background-size: contain;
         background-repeat: no-repeat;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
 
      }
     body>#myProject>.projectsMain>.techContainer>#HTML>#HTMLPic{
@@ -521,32 +521,32 @@ body>#topBar>#closeApp{
         position:relative;
         background-size: contain;
         background-repeat: no-repeat;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
      }
       body>#myProject>.projectsMain>.techContainer>#CSS>#CSSPic{
         background-image: url("image/CSS.png");
         position:relative;
         background-size: contain;
         background-repeat: no-repeat;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
      }
       body>#myProject>.projectsMain>.techContainer>#JS>#JSPic{
         background-image: url("image/javascript.png");
         position:relative;
         background-size: contain;
         background-repeat: no-repeat;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
      }
      body>#myProject>.projectsMain>.techContainer>#python>#pythonPic{
         background-image: url("image/python.png");
         position:relative;
         background-size: contain;
         background-repeat: no-repeat;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
      }
     body>#myProject>#loadMoreContainer{
         position:relative;
@@ -566,7 +566,7 @@ body>#topBar>#closeApp{
         border-radius: 20px;
         width:15%;
         font-weight: bold;
-        font-size: 1.5vw;
+        font-size: 1.5svw;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         display: flex;
         align-items: center;
@@ -582,8 +582,8 @@ body>#topBar>#closeApp{
         position:absolute;
         z-index:-100;
         top:100%;
-        height:2vw;
-        width:2vw;
+        height:2svw;
+        width:2svw;
         background-color: skyblue;
         transition: ease-in-out 0.2s;
         border-radius: 30%;
@@ -629,7 +629,7 @@ body>#topBar>#closeApp{
         width:100%;
         padding-top:5%;
         padding-left:5%;
-        font-size: 2vw;
+        font-size: 2svw;
         display: flex;
         flex-direction: column;
     }
@@ -639,7 +639,7 @@ body>#topBar>#closeApp{
         height:100%;
         width:100%;
         display: grid;
-        font-size: 1vw;
+        font-size: 1svw;
         grid: 30% 17% 17% 17% / auto;
         top:10%
 
@@ -682,7 +682,7 @@ body>#topBar>#closeApp{
         grid-area: 1/ 1 / span 1 / span 2;
     }
     body>#footer>#info>#socialContainer>.socialButton{
-        font-size:1vw;
+        font-size:1svw;
         cursor:pointer;
         position:relative;
         width:fit-content;
@@ -722,7 +722,7 @@ body>#topBar>#closeApp{
     body>#footer>#info>#otherPagesContainer>.container>.title{
         grid-area: 1 / 1 / span 1 / span 1;
         font-weight:bold;
-        font-size:1.5vw;
+        font-size:1.5svw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -733,7 +733,7 @@ body>#topBar>#closeApp{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size:1vw;
+        font-size:1svw;
         color:var(--mainFontColor);
         transition:linear 0.1s;
     }
@@ -752,8 +752,8 @@ body>#topBar>#closeApp{
          background-repeat: no-repeat;
         background-size: contain;
         position:relative;
-        width:3vw;
-        height:3vw;
+        width:3svw;
+        height:3svw;
         transition:ease-out 0.1s;
     }
     body>#footer>#info>#otherPagesContainer>.container:hover > .title{
@@ -768,7 +768,7 @@ body>#topBar>#closeApp{
         display: flex;
         justify-content: center;
         align-items: last baseline;
-        font-size:15vw;
+        font-size:15svw;
         bottom:-50%;
 
     }
@@ -783,8 +783,8 @@ body>#topBar>#closeApp{
 
 #enhanceMyFace{
     position:fixed;
-    width:100vw;
-    height:100vh;
+    width:100svw;
+    height:100svh;
     z-index: -10000;
     display: grid;
     grid: 100% / 50% 50%;
@@ -801,16 +801,16 @@ body>#topBar>#closeApp{
 }
 
 #enhanceMyFace > #leftBackdrop{
-    left:-100vw;
+    left:-100svw;
 }
 
 #enhanceMyFace > #rightBackdrop{
-    right:-100vw;
+    right:-100svw;
 }
 #enhanceMyFace > #faceContent{
     position:absolute;
-    width:100vw;
-    height:100vh;
+    width:100svw;
+    height:100svh;
     display: grid;
     grid: 10% 70% 20% /100%;
 }
@@ -819,7 +819,7 @@ body>#topBar>#closeApp{
     position:relative;
     width:100%;
     height:100%;
-    font-size:min(5vw,5vh);
+    font-size:min(5svw,5svh);
     color:white;
     display: flex;
     flex-direction: column;
@@ -829,8 +829,8 @@ body>#topBar>#closeApp{
 
 #enhanceMyFace > #faceContent > #faceEnhanced{
     position: relative;
-    width:min(60vw,60vh);
-    height:min(60vw,60vh);
+    width:min(60svw,60svh);
+    height:min(60svw,60svh);
     background-color: red;
     display: flex;
     align-self: center;
@@ -851,7 +851,7 @@ body>#topBar>#closeApp{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: min(3vw,3vh);
+    font-size: min(3svw,3svh);
 }
 
 #enhanceMyFace > #faceContent > #faceLeaveContainer > #faceLeave{
@@ -885,7 +885,7 @@ body>#topBar>#closeApp{
     display:flex;
     width:100%;
     height:100%;
-    border-radius: min(1vw,1vh);
+    border-radius: min(1svw,1svh);
     background-color: var(--itemBackgroundColor);
     border-style:solid;
     transition:ease-in 0.3s;
@@ -915,8 +915,8 @@ body>#topBar>#closeApp{
 #main>#mainIcon>#myFaceContainer>#cheesePic{
     position:relative;
     display: flex;
-    width:10vw;
-    height:10vw;
+    width:10svw;
+    height:10svw;
     padding:2%;
     border-style:solid;
     border-color: yellow;
@@ -934,7 +934,7 @@ body>#topBar>#closeApp{
     position:relative;
     color:var(--mainFontColor);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1vw;
+    font-size: 1svw;
     border-top:#777777;
     border-bottom: #777777;
     border-left: var(--itemBackgroundColor);
@@ -960,12 +960,12 @@ body>#topBar>#closeApp{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     top:30%;
-    font-size:1.5vw;
+    font-size:1.5svw;
 }
 #main>#mainIcon>#social>.icon{
     position:relative;
-    width:2.5vw;
-    height:2.5vw;
+    width:2.5svw;
+    height:2.5svw;
     background-color: #444444;
     padding:2%;
     cursor:pointer;
@@ -988,12 +988,12 @@ body>#topBar>#closeApp{
 #main>#languageProf>#languageProfTitle{
     color:white;
     font-weight: bold;
-    font-size:1.5vw;
+    font-size:1.5svw;
     margin:2%;
 }
 #main>#languageProf>.language{
     color:var(--mainFontColor);
-    font-size: 1vw;
+    font-size: 1svw;
     display: grid;
     grid: 60% 40%/30% 70%;
     position:relative;
@@ -1066,21 +1066,21 @@ body>#topBar>#closeApp{
     grid-area: 1/2/span 2/span 1;
     display:inline-flex;
     flex-direction: column;
-    font-size: 1vw;
+    font-size: 1svw;
     position: relative;
     top:10%;
     opacity: 0;
 }
 #main>#aboutMe>#aboutMeTitle{
     color:white;
-    font-size:2vw;
+    font-size:2svw;
     margin:2%;
     font-weight: bold;
 }
 #main>#aboutMe>#aboutMeContent{
     color:var(--mainFontColor);
     margin:2%;
-    font-size:1vw;
+    font-size:1svw;
 }
 #main>#projects{
     grid-area: 3/2/span 2/span 1;
@@ -1088,12 +1088,12 @@ body>#topBar>#closeApp{
     display: absolute;
     overflow: hidden;
     cursor: pointer;
-    font-size: 1vw;
+    font-size: 1svw;
 }
 #main>#projects>#projectTitle{
     margin:2%;
     color:white;
-    font-size:2.5vw;
+    font-size:2.5svw;
     position:relative;
     font-weight: bold;
     overflow: hidden;
@@ -1188,7 +1188,7 @@ body>#topBar>#closeApp{
     top:20%;
     background-color: #444444;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1svw;
     border-radius: 10px;
     opacity:0.7;
     transition: 0.2s ease-in-out;
@@ -1201,7 +1201,7 @@ body>#topBar>#closeApp{
 }
 
 #main>#projects>#scroll>.project>.projectImg>.projectItem>.projectDescp{
-    font-size: 0.8vw;
+    font-size: 0.8svw;
     font-weight: normal;
     background-color: #222222;
     position:relative;
@@ -1221,7 +1221,7 @@ body>#topBar>#closeApp{
     color:white;
     margin:2%;
     font-weight: bold;
-    font-size:2vw;
+    font-size:2svw;
 }
 #main>#programmingLangProf>#techContainer{
     position:relative;
@@ -1236,12 +1236,12 @@ body>#topBar>#closeApp{
     justify-content: center;
     align-items: center;
     color:var(--mainFontColor);
-    font-size:1vw;
+    font-size:1svw;
 }
 #main>#programmingLangProf>#techContainer>div>.techImg{
     position:relative;
-    width:2vw;
-    height:2vw;
+    width:2svw;
+    height:2svw;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -1294,7 +1294,7 @@ body>#topBar>#closeApp{
     color:white;
     margin:2%;
     font-weight: bold;
-    font-size:2vw;
+    font-size:2svw;
 }
 #main>#certification>#certContainer{
     position:relative;
@@ -1310,16 +1310,16 @@ body>#topBar>#closeApp{
     position:relative;
     display: flex;
     align-items: center;
-    font-size:1vw;
+    font-size:1svw;
 }
 #main>#certification>#certContainer>.cert>.bulletPoint{
     position:relative;
-    width:1vw;
-    height:1vw;
+    width:1svw;
+    height:1svw;
 }
 #main>#certification>#certContainer>.cert>.certName{
     color:var(--mainFontColor);
-    margin-left: 1vw;
+    margin-left: 1svw;
 }
 
 
@@ -1327,7 +1327,7 @@ body>#topBar>#closeApp{
     grid-area: 3/3/ span 1/ span 1;
     display: flex;
     flex-direction: column;
-    font-size:2vw;
+    font-size:2svw;
     position:relative;
     right:10%;
     opacity: 0;
@@ -1352,8 +1352,8 @@ body>#topBar>#closeApp{
 }
 #main>#experience>#experienceContainer>.exp>.bulletPoint2{
     position:relative;
-    height:1vw;
-    width:1vw;
+    height:1svw;
+    width:1svw;
 }
 #main>#experience>#experienceContainer>.exp>.expYear{
     position:relative;
@@ -1362,12 +1362,12 @@ body>#topBar>#closeApp{
     width:30%;
     margin-left: 4%;
     color:var(--mainFontColor);
-    font-size:1vw;
+    font-size:1svw;
 }
 
 #main>#experience>#experienceContainer>.exp>.expTitle{
     color:var(--mainFontColor);
-    font-size:1vw;
+    font-size:1svw;
     margin-left: 4%;
 }
 
@@ -1389,7 +1389,7 @@ body>#topBar>#closeApp{
     font-weight: bold;
     color:white;
     margin-left:2%;
-    font-size:2vw;
+    font-size:2svw;
     
 }
 #main>#education>.educationTabs{
@@ -1411,8 +1411,8 @@ body>#topBar>#closeApp{
 #main>#education>.educationTabs>.buttonContainer>.buttons{
     position:relative;
     display: flex;
-    width:1vw;
-    height:1vw;
+    width:1svw;
+    height:1svw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1422,7 +1422,7 @@ body>#topBar>#closeApp{
     display: flex;
     align-items: center;
     color:var(--mainFontColor);
-    font-size: min(1vw, 1vh);
+    font-size: min(1svw, 1svh);
     justify-content: left;
     overflow:hidden;
 }
@@ -1436,7 +1436,7 @@ body>#topBar>#closeApp{
     align-items: right;
     justify-content: left;
     color:var(--mainFontColor);
-    font-size:max(0.9vw,0.9vh);
+    font-size:max(0.9svw,0.9svh);
     font-weight: bold;
 }
 #main>#education>.educationTabs>.courses{
@@ -1446,14 +1446,14 @@ body>#topBar>#closeApp{
     align-items: left;
     color:var(--mainFontColor);
     justify-content: left;
-    font-size:0.75vw;
+    font-size:0.75svw;
 }
 
  #body #footer #info div #exploreTitle{
-        font-size:2.5vw;
+        font-size:2.5svw;
     }
 #body #footer #info div #socialTitle{
-    font-size: 2.5vw;
+    font-size: 2.5svw;
 }
 
 @media (max-width:450px){
@@ -1467,66 +1467,66 @@ body>#topBar>#closeApp{
     position:relative;
     width:100%;
     height:12%;
-    font-size:1.5vw;
+    font-size:1.5svw;
 }
 body>#topBar{
     position:fixed;
-    width:100vw;
-    height:10vh;
+    width:100svw;
+    height:10svh;
 }
 body>#topBar>#icon>#iconImg{
     position:relative;
-    width:min(5vw,5vh);
-    height:min(5vw,5vh);
+    width:min(5svw,5svh);
+    height:min(5svw,5svh);
 }
 body>#topBar>#icon>#text{
-    font-size: min(2vw,2vh);
+    font-size: min(2svw,2svh);
 }
 body>#detectArea{
     position:fixed;
-    width:100vw;
-    height:10vh;
+    width:100svw;
+    height:10svh;
     z-index: 10;
 }
 body>#topBar>#title{
-   font-size:4vw;
+   font-size:4svw;
 }
 body>#topBar>#languageSelector{
     width:15%;
 }
 body>#topBar>#languageSelector>.lang{
-    font-size: 3vw;
+    font-size: 3svw;
 }
 #body>#intro{
     position:relative;
-    height:60vh;
-    width:100vw;
+    height:60svh;
+    width:100svw;
 }
 #body>#intro>#introContainer>.textTitle{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:3.5vw;
+    font-size:3.5svw;
     font-weight: bold;
 }
 #body>#intro>#movingCursor2{
         position:absolute;
-        right:10vw;
+        right:10svw;
 }
 
     #body>#intro>#introContainer>.text{
-        font-size:3vw;
+        font-size:3svw;
     }
     #body #intro #bottomText{
         color:white;
-        font-size:2vw;
+        font-size:2svw;
 
     }
 
     #body #main{
         position:relative;
         display: grid;
-        height:300vh;
+        height:300svh;
         width:90%;
         grid: 20% 10% 10% 10% 10% 10% 10% 15%/ 100%;
     }
@@ -1534,23 +1534,23 @@ body>#topBar>#languageSelector>.lang{
         grid-area: 1 / 1 / span 1 / span 1;
     }
     #body #main #mainIcon #myFaceContainer #cheesePic{
-        height:max(10vw,10vh);
-        width:max(10vw,10vh);
+        height:max(10svw,10svh);
+        width:max(10svw,10svh);
     }
     #body #main #mainIcon #info{
-        font-size: max(1.5vw,1.5vh);
+        font-size: max(1.5svw,1.5svh);
     }
     #body #main #mainIcon #socialTitle{
-        font-size:max(1.5vw,1.5vh);
+        font-size:max(1.5svw,1.5svh);
         position:relative;
         top:0%;
-        left:2vw;
+        left:2svw;
     }
 
     #body #main #mainIcon #social .icon{
         position:relative;
-        width:max(3vw,3vh);
-        height:max(3vw,3vh);
+        width:max(3svw,3svh);
+        height:max(3svw,3svh);
     }
 
 
@@ -1558,10 +1558,10 @@ body>#topBar>#languageSelector>.lang{
         grid-area: 2 / 1 / span 1 / span 1;
     }
     #body #main #languageProfTitle{
-        font-size:4vw;
+        font-size:4svw;
     }
     #body #main .language{
-        font-size:2.5vw;
+        font-size:2.5svw;
     }
     #body #main .language .progressName{
         display: flex;
@@ -1573,10 +1573,10 @@ body>#topBar>#languageSelector>.lang{
     }
 
     #body #main #aboutMe #aboutMeTitle{
-        font-size: 4vw;
+        font-size: 4svw;
     }
     #body #main #aboutMe #aboutMeContent{
-        font-size:2.5vw;
+        font-size:2.5svw;
     }
     #body #main #projects{
         position: relative;
@@ -1599,7 +1599,7 @@ body>#topBar>#languageSelector>.lang{
         position: relative;
     }
     #body #main #projects #projectTitle{
-        font-size: 4vw;
+        font-size: 4svw;
     }
     #body #main #programmingLangProf{
         grid-area: 5 / 1 / span 1 / span 1;
@@ -1608,10 +1608,10 @@ body>#topBar>#languageSelector>.lang{
         grid-gap: 10%;
     }
     #body #main #programmingLangProf #programmingLangProfTitle{
-        font-size: 4vw;
+        font-size: 4svw;
     }
     #body #main #programmingLangProf  div{
-        font-size: 3vw;
+        font-size: 3svw;
     }
     #body #main #programmingLangProf #techContainer{
         position:relative;
@@ -1620,40 +1620,40 @@ body>#topBar>#languageSelector>.lang{
         grid-area: 6 / 1 / span 1 / span 1;
     }
     #body #main #certification #certificationTitle{
-        font-size: 4vw;
+        font-size: 4svw;
     }
     #body #main #certification #certContainer div{
-        font-size: 2.5vw;
+        font-size: 2.5svw;
     }
     #body #main #experience{
         grid-area:7 / 1 / span 1 / span 1;
     }
     #body #main #experience #experienceTitle{
-        font-size:4vw;
+        font-size:4svw;
     }
     #body #main #experience #experienceContainer div{
-        font-size:2.5vw;
+        font-size:2.5svw;
     }
     #body #main #education{
         grid-area:8 / 1 / span 1 / span 1;
     }
     #body #main #education #eduTitle{
-        font-size:4vw;
+        font-size:4svw;
     }
     #body #main #education div{
-        font-size:2.5vw;
+        font-size:2.5svw;
     }
     #body #myProject{
         position:relative;
-        height:170vh;
+        height:170svh;
         width:100%;
-        top:5vh;
+        top:5svh;
         display: grid;
         grid: 4% 27% 27% 27% 9% / 100%;
         grid-gap: 2%;
     }
     #body #myProject #title{
-        font-size: 4vw;
+        font-size: 4svw;
         position: relative;
         display: flex;
         width:100%;
@@ -1681,10 +1681,10 @@ body>#topBar>#languageSelector>.lang{
         justify-content: center;
     }
     #body #myProject .projectsMain .textContainer{
-        font-size: min(4vw,4vh);
+        font-size: min(4svw,4svh);
     }
     #body #myProject .projectsMain .subTextContainer{
-        font-size: min(2.5vw,2.5vh);
+        font-size: min(2.5svw,2.5svh);
         display: flex;
         align-self: center;
         justify-self: center;
@@ -1693,18 +1693,18 @@ body>#topBar>#languageSelector>.lang{
         grid-area: 5 / 1 / span 1 / span 1;
         position:relative;
         width:100%;
-        height:10vh;
+        height:10svh;
     }
     #body #myProject #loadMoreContainer #loadMore{
-        width:30vw;
-        height:7vh;
-        font-size:3vw;
+        width:30svw;
+        height:7svh;
+        font-size:3svw;
     }
     
     #body #footer{
         position:relative;
-        height:35vh;
-        top:10vh;
+        height:35svh;
+        top:10svh;
        
     }
     body>#footer>#info{
@@ -1724,7 +1724,7 @@ body>#topBar>#languageSelector>.lang{
 
     }
      #body #footer #info #hello{
-        font-size:2.5vw;
+        font-size:2.5svw;
         grid-area: 1/ 1/ span 2 / span 1;
     }
      
@@ -1736,11 +1736,11 @@ body>#topBar>#languageSelector>.lang{
     justify-content: center;
    }
     #body #footer #info div #exploreTitle{
-        font-size:2.5vw;
+        font-size:2.5svw;
         grid-area: 2 / 1 / span 1 / span 1;
     }
     #body #footer #info #exploreContainer .exploreButton{
-        font-size:2vw;
+        font-size:2svw;
     }
     #body #footer #info #socialContainer{
         grid-area: 1 / 3 / span 1 / span 1;
@@ -1751,16 +1751,16 @@ body>#topBar>#languageSelector>.lang{
         grid:50% 50% / 30% 30%;
     }
     #body #footer #info #socialContainer .socialButton{
-        font-size:2vw;
+        font-size:2svw;
     }
     #body #footer #info #otherPagesContainer{
         grid-area: 2 / 2 / span 1 / span 2;
     }
     #body #footer #info #otherPagesContainer .container .title{
-        font-size:2.5vw;
+        font-size:2.5svw;
     }
     #body #footer #info #otherPagesContainer .container .subtitle{
-        font-size: 2vw;
+        font-size: 2svw;
         width:100%;
     }
     #body #footer #info #name{
@@ -1773,7 +1773,7 @@ body>#topBar>#languageSelector>.lang{
 
     }
     #body #footer #copyrightContainer{
-        font-size:3vw;
+        font-size:3svw;
     }
 }
 
