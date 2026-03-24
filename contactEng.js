@@ -41,9 +41,13 @@ window.addEventListener("resize",()=>{
          screenSizeIncompatible.style.opacity = "0";
         screenSizeIncompatible.style.zIndex = "-100000";
          for(var i = 0 ;i<body.children.length;i++){
-            if(i!=0){
+            if(i!=0 && i!=1){
                 body.children[i].style.opacity = "1";
+                body.children[i].style.zIndex = "100";
             }
+             body.children[3].style.zIndex = "1000";
+            body.children[1].style.zIndex = "102";
+            body.children[2].style.zIndex = "101";
             
         }
     }
