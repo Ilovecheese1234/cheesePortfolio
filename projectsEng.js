@@ -47,6 +47,21 @@ window.addEventListener("resize",()=>{
             body.children[1].style.zIndex = "102";
             body.children[2].style.zIndex = "101";
             
+            
+            nextPage.style.opacity = "1";
+            nextPage.style.zIndex = "1000";
+            prevPage.style.opacity = "1";
+            prevPage.style.zIndex = "-1000";
+            if(page==maxPage){
+                nextPage.style.opacity = "0";
+                nextPage.style.zIndex = "-1000";
+            }
+            if(page==1){
+                prevPage.style.opacity = "0";
+                prevPage.style.zIndex = "-1000";
+            }
+
+            
         }
     }
 })
