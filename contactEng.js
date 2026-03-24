@@ -14,7 +14,7 @@ const quesContainer = document.querySelectorAll(".quesContainer");
 const contactDetail = document.getElementById("contactDetail");
 const warning = document.getElementById("warning");
 const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
-if(window.outerWidth / window.outerHeight > 2.3){
+if(window.innerWidth / window.innerHeight > 2.3){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
 
@@ -26,7 +26,7 @@ if(window.outerWidth / window.outerHeight > 2.3){
         }
     }
 window.addEventListener("resize",()=>{
-    if(window.outerWidth / window.outerHeight > 2.3){
+    if(window.innerWidth / window.innerHeight > 2.3){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "10000000";
         for(var i = 0 ;i<body.children.length;i++){
