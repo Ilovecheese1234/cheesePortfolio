@@ -11,6 +11,7 @@ const nextPage = document.getElementById("nextPage");
 const curPage = document.getElementById("curPage");
 const mainContainer = document.getElementById("mainContainer");
 const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
+
 if(window.innerWidth / window.innerHeight > 2.3){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
