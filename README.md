@@ -1,27 +1,27 @@
-# 📁 Cheese Portfolio
+# Cheese Portfolio
 
 <div >Welcome to my portfolio! This repository serves as the first step of front-end development</div>
 
-## 📌 About the Project
-Hello World! This portfolio is built during summer semester of my first year in college. Nothing fancy, just a website that is taken inspiration by plenty of other ones online. 🖥️🖥️
+## About the Project
+Hello World! This portfolio is built during summer semester of my first year in college. Nothing fancy, just a website that is taken inspiration by plenty of other ones online.
 
 
-## 📁 What's Inside
+## What's Inside
 
-- Home Page 🏠
+- Home Page 
    - Personal Description
    - Brief Contact Details
    - School's and Personal Projects' Description
-- Project Page 📄
+- Project Page 
   - School's and Personal Projects' Description
   - Download Area
-- Contact Page 📱
+- Contact Page
   - Submission Form for Inquiry
   - Resume Download
 
 
 
-## ✨ Future Aspirations
+##  Future Aspirations
 
 1.  __Improvement of UIUX__
     - As this is my first time in front-end development, I am hoping to enhance user experience. Please give me feedbacks for better UIUX or fork the program.
