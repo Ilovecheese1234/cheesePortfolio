@@ -23,7 +23,7 @@ const icon = document.querySelectorAll(".icon");
 
 const buttonFooter = document.querySelectorAll(".buttonFooter");
 const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
-if(window.innerWidth / window.innerHeight > 2.3 || window.innerWidth>450 && window.innerHeight<300){
+if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
 
@@ -36,7 +36,7 @@ if(window.innerWidth / window.innerHeight > 2.3 || window.innerWidth>450 && wind
         }
     }
 window.addEventListener("resize",()=>{
-    if(window.innerWidth / window.innerHeight > 2.3 || window.innerWidth>450 && window.innerHeight<300){
+    if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
         for(var i = 0 ;i<body.children.length;i++){

@@ -392,7 +392,6 @@ body>#mainContainer>#pageSelectorContainer>.pageSelectors{
 }
 body>#mainContainer>#pageSelectorContainer>#prevPage{
     z-index: -100;
-    opacity: 0;
 }
 
 body>#mainContainer>#pageSelectorContainer>.pageSelectors:hover{

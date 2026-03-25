@@ -12,7 +12,7 @@ const curPage = document.getElementById("curPage");
 const mainContainer = document.getElementById("mainContainer");
 const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
 
-if(window.innerWidth / window.innerHeight > 2.3 || window.innerWidth>450 && window.innerHeight<300){
+if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
 
@@ -24,7 +24,7 @@ if(window.innerWidth / window.innerHeight > 2.3 || window.innerWidth>450 && wind
         }
     }
 window.addEventListener("resize",()=>{
-    if(window.innerWidth / window.innerHeight > 2.3 || window.innerWidth>450 && window.innerHeight<300){
+    if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "10000000";
         for(var i = 0 ;i<body.children.length;i++){
@@ -43,24 +43,9 @@ window.addEventListener("resize",()=>{
                 body.children[i].style.opacity = "1";
                 body.children[3].style.zIndex = "100";
             }
-            body.children[3].style.zIndex = "1000";
+            body.children[4].style.zIndex = "1000";
             body.children[1].style.zIndex = "102";
             body.children[2].style.zIndex = "101";
-            
-            
-            nextPage.style.opacity = "1";
-            nextPage.style.zIndex = "1000";
-            prevPage.style.opacity = "1";
-            prevPage.style.zIndex = "-1000";
-            if(page==maxPage){
-                nextPage.style.opacity = "0";
-                nextPage.style.zIndex = "-1000";
-            }
-            if(page==1){
-                prevPage.style.opacity = "0";
-                prevPage.style.zIndex = "-1000";
-            }
-
             
         }
     }
@@ -315,18 +300,13 @@ function appendNewPage(index,direction){
 function nextPageEventListener(){
     nextPage.addEventListener("mouseup",()=>{
         page += 1
+        if(page == maxPage + 1){
+            page = 1;
+        }
         nextPage.style.opacity = "1";
         nextPage.style.zIndex = "-1000";
         prevPage.style.opacity = "1";
         prevPage.style.zIndex = "1000";
-        if(page==maxPage){
-            nextPage.style.opacity = "0";
-            nextPage.style.zIndex = "-1000";
-        }
-        if(page==1){
-            prevPage.style.opacity = "0";
-            prevPage.style.zIndex = "-1000";
-        }
         projects.forEach((e,i)=>{
             e.style.left = "-200%";
             refreshPage(e,i,0)  
@@ -347,18 +327,13 @@ function nextPageEventListener(){
 function prevPageEventListener(){
     prevPage.addEventListener("mouseup",()=>{
         page -= 1
+        if(page==0){
+            page = maxPage;
+        }
         nextPage.style.opacity = "1";
         nextPage.style.zIndex = "1000";
         prevPage.style.opacity = "1";
         prevPage.style.zIndex = "-1000";
-        if(page==maxPage){
-            nextPage.style.opacity = "0";
-            nextPage.style.zIndex = "-1000";
-        }
-        if(page==1){
-            prevPage.style.opacity = "0";
-            prevPage.style.zIndex = "-1000";
-        }
         projects.forEach((e,i)=>{
             e.style.left = "200%";
             refreshPage(e,i,1) 
