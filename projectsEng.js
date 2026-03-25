@@ -88,7 +88,7 @@ var imageArr = [
 ]
 
 var linkArr = [
-    ["https://github.com/Ilovecheese1234/cheesePortfolio","test.com","test.com","test.com"],
+    ["https://github.com/Ilovecheese1234/cheesePortfolio","https://github.com/Ilovecheese1234/Network-Architecture-Simulation","test.com","test.com"],
     ["test.com","test.com","test.com","test.com"]
 ]
 
