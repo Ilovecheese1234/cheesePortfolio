@@ -51,7 +51,7 @@ window.addEventListener("resize",()=>{
     }
 })
 
-var page = 1
+var page = [1]
 var maxPage = 2
 //A class that stores all of the projects details
 class Project{
@@ -88,7 +88,7 @@ var imageArr = [
 ]
 
 var linkArr = [
-    ["test.com","test.com","test.com","test.com"],
+    ["https://github.com/Ilovecheese1234/cheesePortfolio","test.com","test.com","test.com"],
     ["test.com","test.com","test.com","test.com"]
 ]
 
@@ -165,8 +165,11 @@ function directEvent(e){
     })
 }
 
-direct.forEach((e)=>{
+direct.forEach((e,i)=>{
     directEvent(e)
+    e.addEventListener("mouseup",()=>{
+        window.location.href = projectObjArr[page[0]-1][i].link;
+    })
 })
 
 window.addEventListener("mousemove",(e)=>{
@@ -214,9 +217,6 @@ function redirect(index,lang){
 
 
 function openApp(index){
-    if(index==0){
-        window.location.href = "https://web.whatsapp.com/";
-    }
     if(index==1){
         window.location.href = "https://www.instagram.com/ilovecheese_3131/";
     }
@@ -229,12 +229,8 @@ function openApp(index){
 }
 
 function toProject(index){
-    if(index==2){
-        window.location.href = "https://github.com/Ilovecheese1234/Portfolio";
-    }
-     if(index==4){
-        window.location.href = "https://github.com/Ilovecheese1234/SHA256demo";
-    }
+    window.location.href = projectObjArr[page[0]-1][index].link
+    console.log(123)
 }
 
 function refreshPage(element,index,direction){
@@ -299,9 +295,9 @@ function appendNewPage(index,direction){
 
 function nextPageEventListener(){
     nextPage.addEventListener("mouseup",()=>{
-        page += 1
-        if(page == maxPage + 1){
-            page = 1;
+        page[0] += 1
+        if(page[0] == maxPage + 1){
+            page[0] = 1;
         }
         nextPage.style.opacity = "1";
         nextPage.style.zIndex = "-1000";
@@ -326,8 +322,8 @@ function nextPageEventListener(){
 }
 function prevPageEventListener(){
     prevPage.addEventListener("mouseup",()=>{
-        page -= 1
-        if(page==0){
+        page[0] -= 1
+        if(page[0]==0){
             page = maxPage;
         }
         nextPage.style.opacity = "1";
