@@ -14,7 +14,7 @@ const quesContainer = document.querySelectorAll(".quesContainer");
 const contactDetail = document.getElementById("contactDetail");
 const warning = document.getElementById("warning");
 const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
-if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
+if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1  && window.innerHeight / window.innerWidth > 1.3 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
 
@@ -26,7 +26,7 @@ if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.i
         }
     }
 window.addEventListener("resize",()=>{
-    if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
+    if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1  && window.innerHeight / window.innerWidth > 1.3 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "1000000";
         for(var i = 0 ;i<body.children.length;i++){
