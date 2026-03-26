@@ -12,7 +12,7 @@ const curPage = document.getElementById("curPage");
 const mainContainer = document.getElementById("mainContainer");
 const screenSizeIncompatible = document.getElementById("screenSizeIncompatible");
 
-if(window.innerWidth / window.innerHeight > 2 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
+if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1  && window.innerHeight / window.innerWidth < 1.3 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "100000";
 
@@ -24,7 +24,7 @@ if(window.innerWidth / window.innerHeight > 2 || window.innerHeight / window.inn
         }
     }
 window.addEventListener("resize",()=>{
-    if(window.innerWidth / window.innerHeight > 2 || window.innerHeight / window.innerWidth > 1 && window.innerWidth > 450){
+    if(window.innerWidth / window.innerHeight > 2.3 || window.innerHeight / window.innerWidth > 1  && window.innerHeight / window.innerWidth < 1.3 && window.innerWidth > 450){
         screenSizeIncompatible.style.opacity = "1";
         screenSizeIncompatible.style.zIndex = "10000000";
         for(var i = 0 ;i<body.children.length;i++){
@@ -64,7 +64,7 @@ class Project{
 }
 
 var nameArr = [
-    ["Cheese Portfolio","Enterprise Network Architecture Simulation for Cinema Infrastructure","Inverse Matrix Asymmetric Encryption","Optipath: Dijkstra Algorithm Visualizer"],
+    ["Cheese Portfolio","Enterprise Network Architecture Simulation for Cinema Infrastructure","Inverse Matrix Symmetric Encryption","Optipath: Dijkstra Algorithm Visualizer"],
     ["Path Seeker","SHA256 Visualizer","Simple Candy Crush","Comming Soon"]
 ] 
 
@@ -88,7 +88,7 @@ var imageArr = [
 ]
 
 var linkArr = [
-    ["https://github.com/Ilovecheese1234/cheesePortfolio","test.com","test.com","test.com"],
+    ["https://github.com/Ilovecheese1234/cheesePortfolio","https://github.com/Ilovecheese1234/Network-Architecture-Simulation","test.com","test.com"],
     ["test.com","test.com","test.com","test.com"]
 ]
 
